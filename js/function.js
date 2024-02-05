@@ -105,9 +105,50 @@ let inEnglish = [
   "You are a masterpiece of the universe – embrace your brilliance and let it radiate",
 ];
 
-// ! functionality
+// ! random number functionality
+let randomNumber, word;
 
-let randomNumber = Math.trunc(Math.random() * 50);
-console.log(randomNumber);
-console.log(InGeorgia[randomNumber]);
-console.log(inEnglish[randomNumber]);
+//! HTML ELEMENTS
+
+const ortskhobila = document.querySelector(".ortskhobila");
+const ortskhobilaClick = document.querySelector(".click-text");
+const randomMessage = document.querySelector(".random-message");
+const goBack = document.querySelector(".open-new");
+let dinamicText = document.querySelector(".meesage");
+
+ortskhobila.addEventListener("click", () => {
+  removeMainPage();
+  addNewSection();
+  displayMessage();
+});
+
+goBack.addEventListener("click", () => {
+  resetPages();
+});
+
+function resetPages() {
+  dinamicText.textContent = "";
+  randomMessage.classList.add("disabled");
+  ortskhobila.classList.add("active");
+  ortskhobila.classList.remove("disabled");
+  ortskhobilaClick.classList.add("active");
+  ortskhobilaClick.classList.remove("disabled");
+}
+
+function removeMainPage() {
+  ortskhobila.classList.remove("active");
+  ortskhobila.classList.add("disabled");
+  ortskhobilaClick.classList.remove("active");
+  ortskhobilaClick.classList.add("disabled");
+}
+
+function addNewSection() {
+  randomMessage.classList.remove("disabled");
+}
+
+function displayMessage() {
+  randomNumber = Math.trunc(Math.random() * 50);
+  word = InGeorgia[randomNumber];
+  dinamicText.textContent = "";
+  dinamicText.textContent = `${word}`;
+}

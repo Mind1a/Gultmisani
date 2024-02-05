@@ -15,6 +15,13 @@
       width: 100%;
     }
   }
+  .ortskhobila.disabled {
+    display: none;
+  }
+  .ortskhobila.active {
+    display: flex;
+  }
+
   .ortskhobila {
     max-width: 500px;
     width: 100%;
@@ -50,6 +57,9 @@
       text-align: left;
       cursor: pointer;
     }
+  }
+  .click-text.disabled {
+    display: none;
   }
   .social-wrap {
     width: 90%;

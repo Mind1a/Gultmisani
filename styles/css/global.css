@@ -193,6 +193,12 @@ button {
   max-width: 411.23px;
   width: 100%;
 }
+.main-section .ortskhobila.disabled {
+  display: none;
+}
+.main-section .ortskhobila.active {
+  display: flex;
+}
 .main-section .ortskhobila {
   max-width: 500px;
   width: 100%;
@@ -226,6 +232,9 @@ button {
   letter-spacing: 0em;
   text-align: left;
   cursor: pointer;
+}
+.main-section .click-text.disabled {
+  display: none;
 }
 .main-section .social-wrap {
   width: 90%;
@@ -290,4 +299,8 @@ button {
   text-align: left;
   color: #000;
   opacity: 0.8;
+}
+
+.random-message.disabled {
+  display: none;
 }/*# sourceMappingURL=global.css.map */
