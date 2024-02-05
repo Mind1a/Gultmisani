@@ -127,7 +127,6 @@ goBack.addEventListener("click", () => {
 });
 
 function resetPages() {
-  dinamicText.textContent = "";
   randomMessage.classList.add("disabled");
   ortskhobila.classList.add("active");
   ortskhobila.classList.remove("disabled");
@@ -150,5 +149,6 @@ function displayMessage() {
   randomNumber = Math.trunc(Math.random() * 50);
   word = InGeorgia[randomNumber];
   dinamicText.textContent = "";
-  dinamicText.textContent = `${word}`;
+  dinamicText.innerHTML = `<span class="star">*</span>${word}
+  <span class="star1">*</span>`;
 }
