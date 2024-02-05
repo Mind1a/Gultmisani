@@ -1,0 +1,324 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Work Sans", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "firaGo-regular";
+  src: url(../../assets/fonts/FiraGO_TTF_1001/Roman/FiraGO-Regular.ttf);
+}
+@font-face {
+  font-family: "firaGo-medium";
+  src: url(../../assets/fonts/FiraGO_TTF_1001/Roman/FiraGO-Medium.ttf);
+}
+@font-face {
+  font-family: "firaGo-light";
+  src: url(../../assets/fonts/FiraGO_TTF_1001/Roman/FiraGO-Light.ttf);
+}
+@font-face {
+  font-family: "firaGo-extra-bold";
+  src: url(../../assets/fonts/FiraGO_TTF_1001/Roman/FiraGO-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "firaGo-extra-light";
+  src: url(../../assets/fonts/FiraGO_TTF_1001/Roman/FiraGO-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "firaGo-semiBold";
+  src: url(../../assets/fonts/FiraGO_TTF_1001/Roman/FiraGO-SemiBold.ttf);
+}
+@font-face {
+  font-family: "firago-italic-light";
+  src: url(../../assets/fonts/FiraGO_TTF_1001/Italic/FiraGO-LightItalic.ttf);
+}
+@font-face {
+  font-family: "Nika";
+  src: url(../../assets/fonts/Nika-Regular.ttf);
+}
+.main-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 115px 40px 40px 55px;
+}
+.main-section .logo-wrapper {
+  padding: 5px 0;
+  display: grid;
+  place-items: center;
+}
+.main-section .logo-wrapper img {
+  max-width: 411.23px;
+  width: 100%;
+}
+.main-section .ortskhobila.disabled {
+  display: none;
+}
+.main-section .ortskhobila.active {
+  display: flex;
+}
+.main-section .ortskhobila {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+.main-section .ortskhobila .cookie {
+  max-width: 436px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.main-section .ortskhobila .cookie:hover {
+  transform: scale(1.03);
+  transition: 0.5s all ease;
+}
+.main-section .ortskhobila .price-tag {
+  position: absolute;
+  right: 0px;
+  max-width: 151.4px;
+  width: 100%;
+}
+.main-section .click-text p {
+  font-family: "firaGo-light";
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+}
+.main-section .click-text.disabled {
+  display: none;
+}
+.main-section .social-wrap {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.random-message {
+  max-width: 860px;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.random-message .open-new {
+  max-width: 200px;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.random-message .open-new p {
+  font-family: "firago-italic-light";
+  opacity: 70%;
+}
+.random-message .open-new .image-svg {
+  height: 20px;
+  display: grid;
+  place-items: center;
+}
+.random-message .open-new .image-svg img {
+  opacity: 100%;
+}
+.random-message .cookie-meesage {
+  width: 100%;
+  display: flex;
+}
+.random-message .cookie-meesage .meesage {
+  font-family: "Nika";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.random-message .cookie-meesage .star {
+  font-family: "Nika";
+  color: red;
+  font-size: 64px;
+  margin-right: 20px;
+}
+.random-message .cookie-meesage .star1 {
+  font-family: "Nika";
+  color: red;
+  font-size: 64px;
+  align-self: flex-end;
+  margin-left: 10px;
+}
+.random-message .download {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.random-message .download p {
+  font-family: "firaGO-light";
+  font-size: 24px;
+  font-style: italic;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000;
+  opacity: 0.8;
+}
+
+.random-message.disabled {
+  display: none;
+}/*# sourceMappingURL=global.css.map */
