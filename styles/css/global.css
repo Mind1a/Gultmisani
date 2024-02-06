@@ -179,31 +179,78 @@ button {
   font-family: "Nika";
   src: url(../../assets/fonts/Nika-Regular.ttf);
 }
-.main-section {
+body {
+  display: flex;
+  justify-content: space-between;
+}
+body .left-marquee {
+  max-width: 64px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000;
+}
+body .left-marquee .left {
+  width: 32px;
+  margin: 0 auto;
+  height: 100%;
+}
+body .left-marquee .left img {
+  margin-bottom: 20px;
+}
+body .left-marquee .left .star {
+  margin-left: 4px;
+}
+body .right-marquee {
+  max-width: 64px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000;
+}
+body .right-marquee .right {
+  width: 32px;
+  margin: 0 auto;
+  height: 100%;
+}
+body .right-marquee .right img {
+  margin-bottom: 20px;
+}
+body .right-marquee .right .star2 {
+  margin-right: 4px;
+}
+body .main-section {
+  max-width: 1440px;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  padding: 115px 40px 40px 55px;
+  padding: 115px 0 55px 0;
 }
-.main-section .logo-wrapper {
+body .main-section .logo-wrapper {
   padding: 5px 0;
   display: grid;
   place-items: center;
 }
-.main-section .logo-wrapper img {
+body .main-section .logo-wrapper img {
   max-width: 411.23px;
   width: 100%;
 }
-.main-section .ortskhobila.disabled {
+body .main-section .ortskhobila.disabled {
   display: none;
 }
-.main-section .ortskhobila.active {
+body .main-section .ortskhobila.active {
   display: flex;
 }
-.main-section .ortskhobila {
+body .main-section .ortskhobila {
   max-width: 500px;
   width: 100%;
   position: relative;
@@ -211,23 +258,23 @@ button {
   place-items: center;
   padding: 10px;
 }
-.main-section .ortskhobila .cookie {
+body .main-section .ortskhobila .cookie {
   max-width: 436px;
   width: 100%;
   cursor: pointer;
   transition: 0.5s all ease;
 }
-.main-section .ortskhobila .cookie:hover {
+body .main-section .ortskhobila .cookie:hover {
   transform: scale(1.03);
   transition: 0.5s all ease;
 }
-.main-section .ortskhobila .price-tag {
+body .main-section .ortskhobila .price-tag {
   position: absolute;
   right: 0px;
   max-width: 151.4px;
   width: 100%;
 }
-.main-section .click-text p {
+body .main-section .click-text p {
   font-family: "firaGo-light";
   font-size: 24px;
   font-style: italic;
@@ -237,10 +284,10 @@ button {
   text-align: left;
   cursor: pointer;
 }
-.main-section .click-text.disabled {
+body .main-section .click-text.disabled {
   display: none;
 }
-.main-section .social-wrap {
+body .main-section .social-wrap {
   width: 90%;
   display: flex;
   justify-content: flex-start;
