@@ -173,4 +173,5 @@ function activateDownload() {
 function cancelPopup() {
   RegularPopup.classList.remove("active");
   mainSection.classList.remove("blur");
+  goBack.classList.remove("none");
 }
