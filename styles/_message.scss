@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  .open-new.none {
+    opacity: 0;
+  }
   .open-new {
     max-width: 200px;
     width: 100%;
