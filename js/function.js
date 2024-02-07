@@ -114,9 +114,13 @@ const ortskhobila = document.querySelector(".ortskhobila");
 const ortskhobilaClick = document.querySelector(".click-text");
 const randomMessage = document.querySelector(".random-message");
 const goBack = document.querySelector(".open-new");
+const activePopup = document.querySelector(".popup-wrapper.active");
+const RegularPopup = document.querySelector(".popup-wrapper");
+const mainSection = document.querySelector(".main-section");
+const download = document.querySelector(".download");
+const closePopup = document.querySelector(".close");
 let dinamicText = document.querySelector(".meesage");
-
-ortskhobila.addEventListener("click", () => {
+ortskhobila.addEventListener("click", function () {
   removeMainPage();
   addNewSection();
   displayMessage();
@@ -124,6 +128,13 @@ ortskhobila.addEventListener("click", () => {
 
 goBack.addEventListener("click", () => {
   resetPages();
+});
+
+download.addEventListener("click", () => {
+  activateDownload();
+});
+closePopup.addEventListener("click", () => {
+  cancelPopup();
 });
 
 function resetPages() {
@@ -151,4 +162,15 @@ function displayMessage() {
   dinamicText.textContent = "";
   dinamicText.innerHTML = `<span class="star">*</span>${word}
   <span class="star1">*</span>`;
+}
+
+function activateDownload() {
+  RegularPopup.classList.add("active");
+  mainSection.classList.add("blur");
+  goBack.classList.add("none");
+}
+
+function cancelPopup() {
+  RegularPopup.classList.remove("active");
+  mainSection.classList.remove("blur");
 }

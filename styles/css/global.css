@@ -225,6 +225,9 @@ body .right-marquee .right img {
 body .right-marquee .right .star2 {
   margin-right: 4px;
 }
+body .main-section.blur {
+  filter: blur(4px);
+}
 body .main-section {
   max-width: 1440px;
   width: 100%;
@@ -293,6 +296,93 @@ body .main-section .social-wrap {
   justify-content: flex-start;
   align-items: flex-start;
 }
+body .popup-wrapper {
+  width: 662px;
+  height: 331px;
+  padding: 0 26px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: solid 2px #000;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+body .popup-wrapper .download-button {
+  width: 168px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  font-family: "firaGo-medium";
+  font-size: 24px;
+  border: solid 2px #000;
+  border-radius: 15px;
+  margin-top: 44px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+body .popup-wrapper .download-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+body .popup-wrapper .close {
+  align-self: flex-end;
+  cursor: pointer;
+}
+body .popup-wrapper .select-format .instruction {
+  font-family: "firaGo-medium";
+  font-size: 24px;
+  margin-top: 14px;
+}
+body .popup-wrapper .formats-wrap {
+  display: flex;
+  border: solid 2px #000;
+  border-radius: 24px;
+  margin-top: 25px;
+  transition: all ease 0.4s;
+}
+body .popup-wrapper .formats-wrap:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+body .popup-wrapper .formats-wrap .format {
+  width: 280px;
+  height: 77px;
+  display: grid;
+  place-items: center;
+  border-right: solid 2px #000;
+  cursor: pointer;
+}
+body .popup-wrapper .formats-wrap .format h4 {
+  font-family: "firaGo-regular";
+  font-size: 24px;
+}
+body .popup-wrapper .formats-wrap .format p {
+  font-family: "firaGo-light";
+  font-size: 15px;
+}
+body .popup-wrapper .formats-wrap .format1 {
+  width: 280px;
+  height: 77px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+body .popup-wrapper .formats-wrap .format1 h4 {
+  font-family: "firaGo-regular";
+  font-size: 24px;
+}
+body .popup-wrapper .formats-wrap .format1 p {
+  font-family: "firaGo-light";
+  font-size: 15px;
+}
+body .popup-wrapper.active {
+  display: flex;
+  animation: 1s ease-in popup;
+}
 
 .random-message {
   max-width: 860px;
@@ -301,6 +391,9 @@ body .main-section .social-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.random-message .open-new.none {
+  opacity: 0;
 }
 .random-message .open-new {
   max-width: 200px;
@@ -368,4 +461,15 @@ body .main-section .social-wrap {
 
 .random-message.disabled {
   display: none;
+}
+
+@keyframes popup {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=global.css.map */
