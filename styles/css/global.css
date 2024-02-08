@@ -354,6 +354,7 @@ body .popup-wrapper .formats-wrap .format {
   display: grid;
   place-items: center;
   border-right: solid 2px #000;
+  border-radius: 20px 0 0 20px;
   cursor: pointer;
 }
 body .popup-wrapper .formats-wrap .format h4 {
@@ -419,26 +420,29 @@ body .popup-wrapper.active {
 .random-message .cookie-meesage {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-.random-message .cookie-meesage .meesage {
+.random-message .cookie-meesage .message {
   font-family: "Nika";
   font-size: 48px;
   font-weight: 400;
   line-height: 51px;
-  letter-spacing: 0em;
   text-align: center;
+  padding: 5px;
+  transition: 0.5s all ease;
 }
 .random-message .cookie-meesage .star {
   font-family: "Nika";
   color: red;
   font-size: 64px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .random-message .cookie-meesage .star1 {
   font-family: "Nika";
   color: red;
   font-size: 64px;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-left: 10px;
 }
 .random-message .download {

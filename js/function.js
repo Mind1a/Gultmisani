@@ -119,7 +119,10 @@ const RegularPopup = document.querySelector(".popup-wrapper");
 const mainSection = document.querySelector(".main-section");
 const download = document.querySelector(".download");
 const closePopup = document.querySelector(".close");
-let dinamicText = document.querySelector(".meesage");
+const dinamicText = document.querySelector(".message");
+const blurtSection = document.querySelector(".main-section.blur");
+let mainActive = false;
+
 ortskhobila.addEventListener("click", function () {
   removeMainPage();
   addNewSection();
@@ -136,6 +139,12 @@ download.addEventListener("click", () => {
 closePopup.addEventListener("click", () => {
   cancelPopup();
 });
+
+if (mainActive) {
+  mainSection.addEventListener("click", () => {
+    cancelPopup();
+  });
+}
 
 function resetPages() {
   randomMessage.classList.add("disabled");
@@ -160,14 +169,25 @@ function displayMessage() {
   randomNumber = Math.trunc(Math.random() * 50);
   word = InGeorgia[randomNumber];
   dinamicText.textContent = "";
-  dinamicText.innerHTML = `<span class="star">*</span>${word}
-  <span class="star1">*</span>`;
+  dinamicText.textContent = typeText(dinamicText, word);
 }
+
+function typeText(el, txt, i = -1) {
+  el.textContent += txt[i];
+  if (i === txt.length - 1) {
+    return;
+  }
+
+  setTimeout(() => typeText(el, txt, i + 1), 80);
+}
+//! funqcia gamoidzaxe!!!!!!!
+//! typeText(header, word);
 
 function activateDownload() {
   RegularPopup.classList.add("active");
   mainSection.classList.add("blur");
   goBack.classList.add("none");
+  mainActive = !mainActive;
 }
 
 function cancelPopup() {
