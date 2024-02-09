@@ -120,6 +120,8 @@ const mainSection = document.querySelector(".main-section");
 const download = document.querySelector(".download");
 const closePopup = document.querySelector(".close");
 const dinamicText = document.querySelector(".message");
+const selectFormat1 = document.querySelector(".format");
+const selectFormat2 = document.querySelector(".format1");
 const blurtSection = document.querySelector(".main-section.blur");
 
 ortskhobila.addEventListener("click", function () {
@@ -137,6 +139,15 @@ download.addEventListener("click", () => {
 });
 closePopup.addEventListener("click", () => {
   cancelPopup();
+});
+selectFormat1.addEventListener("click", () => {
+  selectFormat2.classList.remove("selected");
+  addSelected(selectFormat1);
+});
+
+selectFormat2.addEventListener("click", () => {
+  selectFormat1.classList.remove("selected");
+  addSelected(selectFormat2);
 });
 
 function resetPages() {
@@ -184,4 +195,12 @@ function cancelPopup() {
   RegularPopup.classList.remove("active");
   mainSection.classList.remove("blur");
   goBack.classList.remove("none");
+}
+
+function addSelected(el) {
+  el.classList.add("selected");
+}
+
+function removeSelect(el) {
+  el.classList.remove("selected");
 }

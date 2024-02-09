@@ -157,14 +157,17 @@ body {
       border-radius: 15px;
       margin-top: 44px;
       cursor: pointer;
-      transition: all ease 0.4s;
+      transition: 0.4s all ease;
       &:hover {
+        background-color: #000;
+        color: #fff;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
     }
     .close {
       align-self: flex-end;
       cursor: pointer;
+      transition: 0.4s all ease;
     }
 
     .select-format {
@@ -183,6 +186,7 @@ body {
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
+
       .format {
         width: 280px;
         height: 77px;
@@ -191,6 +195,7 @@ body {
         border-right: solid 2px #000;
         border-radius: 20px 0 0 20px;
         cursor: pointer;
+        transition: 0.4s all ease;
         h4 {
           font-family: "firaGo-regular";
           font-size: 24px;
@@ -200,12 +205,18 @@ body {
           font-size: 15px;
         }
       }
+      .format.selected {
+        background-color: #000;
+        color: #fff;
+      }
       .format1 {
         width: 280px;
         height: 77px;
         display: grid;
         place-items: center;
         cursor: pointer;
+        border-radius: 0 20px 20px 0;
+        transition: 0.4s all ease;
         h4 {
           font-family: "firaGo-regular";
           font-size: 24px;
@@ -214,6 +225,10 @@ body {
           font-family: "firaGo-light";
           font-size: 15px;
         }
+      }
+      .format1.selected {
+        background-color: #000;
+        color: #fff;
       }
     }
   }
