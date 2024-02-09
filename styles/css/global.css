@@ -181,7 +181,9 @@ button {
 }
 body {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 0 70px;
 }
 body .left-marquee {
   max-width: 64px;
@@ -192,6 +194,9 @@ body .left-marquee {
   align-items: center;
   overflow: hidden;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 body .left-marquee .left {
   width: 32px;
@@ -213,6 +218,9 @@ body .right-marquee {
   align-items: center;
   overflow: hidden;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 body .right-marquee .right {
   width: 32px;
@@ -295,6 +303,8 @@ body .main-section .social-wrap {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-top: 100px;
+  padding-bottom: 80px;
 }
 body .popup-wrapper {
   width: 662px;
@@ -324,14 +334,17 @@ body .popup-wrapper .download-button {
   border-radius: 15px;
   margin-top: 44px;
   cursor: pointer;
-  transition: all ease 0.4s;
+  transition: 0.4s all ease;
 }
 body .popup-wrapper .download-button:hover {
+  background-color: #000;
+  color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 body .popup-wrapper .close {
   align-self: flex-end;
   cursor: pointer;
+  transition: 0.4s all ease;
 }
 body .popup-wrapper .select-format .instruction {
   font-family: "firaGo-medium";
@@ -354,7 +367,9 @@ body .popup-wrapper .formats-wrap .format {
   display: grid;
   place-items: center;
   border-right: solid 2px #000;
+  border-radius: 20px 0 0 20px;
   cursor: pointer;
+  transition: 0.4s all ease;
 }
 body .popup-wrapper .formats-wrap .format h4 {
   font-family: "firaGo-regular";
@@ -364,12 +379,18 @@ body .popup-wrapper .formats-wrap .format p {
   font-family: "firaGo-light";
   font-size: 15px;
 }
+body .popup-wrapper .formats-wrap .format.selected {
+  background-color: #000;
+  color: #fff;
+}
 body .popup-wrapper .formats-wrap .format1 {
   width: 280px;
   height: 77px;
   display: grid;
   place-items: center;
   cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  transition: 0.4s all ease;
 }
 body .popup-wrapper .formats-wrap .format1 h4 {
   font-family: "firaGo-regular";
@@ -378,6 +399,10 @@ body .popup-wrapper .formats-wrap .format1 h4 {
 body .popup-wrapper .formats-wrap .format1 p {
   font-family: "firaGo-light";
   font-size: 15px;
+}
+body .popup-wrapper .formats-wrap .format1.selected {
+  background-color: #000;
+  color: #fff;
 }
 body .popup-wrapper.active {
   display: flex;
@@ -419,27 +444,31 @@ body .popup-wrapper.active {
 .random-message .cookie-meesage {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 100px;
 }
-.random-message .cookie-meesage .meesage {
+.random-message .cookie-meesage .message {
   font-family: "Nika";
   font-size: 48px;
   font-weight: 400;
   line-height: 51px;
-  letter-spacing: 0em;
   text-align: center;
+  padding: 5px;
+  transition: 0.5s all ease;
 }
 .random-message .cookie-meesage .star {
   font-family: "Nika";
   color: red;
   font-size: 64px;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 .random-message .cookie-meesage .star1 {
   font-family: "Nika";
   color: red;
   font-size: 64px;
-  align-self: flex-end;
-  margin-left: 10px;
+  align-self: flex-start;
+  margin-left: 5px;
 }
 .random-message .download {
   width: 100%;
@@ -447,6 +476,7 @@ body .popup-wrapper.active {
   place-items: center;
   gap: 10px;
   cursor: pointer;
+  margin-top: 150px;
 }
 .random-message .download p {
   font-family: "firaGO-light";

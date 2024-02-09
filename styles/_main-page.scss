@@ -1,6 +1,8 @@
 body {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 0 70px;
   .left-marquee {
     max-width: 64px;
     width: 100%;
@@ -10,6 +12,9 @@ body {
     align-items: center;
     overflow: hidden;
     background-color: $font-color;
+    position: fixed;
+    top: 0;
+    left: 0;
     .left {
       width: 32px;
       margin: 0 auto;
@@ -31,6 +36,9 @@ body {
     align-items: center;
     overflow: hidden;
     background-color: $font-color;
+    position: fixed;
+    top: 0;
+    right: 0;
     .right {
       width: 32px;
       margin: 0 auto;
@@ -118,9 +126,10 @@ body {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+      margin-top: 100px;
+      padding-bottom: 80px;
     }
   }
-
   .popup-wrapper {
     width: 662px;
     height: 331px;
@@ -148,14 +157,17 @@ body {
       border-radius: 15px;
       margin-top: 44px;
       cursor: pointer;
-      transition: all ease 0.4s;
+      transition: 0.4s all ease;
       &:hover {
+        background-color: #000;
+        color: #fff;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
     }
     .close {
       align-self: flex-end;
       cursor: pointer;
+      transition: 0.4s all ease;
     }
 
     .select-format {
@@ -174,14 +186,16 @@ body {
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
+
       .format {
         width: 280px;
         height: 77px;
         display: grid;
         place-items: center;
         border-right: solid 2px #000;
+        border-radius: 20px 0 0 20px;
         cursor: pointer;
-
+        transition: 0.4s all ease;
         h4 {
           font-family: "firaGo-regular";
           font-size: 24px;
@@ -191,12 +205,18 @@ body {
           font-size: 15px;
         }
       }
+      .format.selected {
+        background-color: #000;
+        color: #fff;
+      }
       .format1 {
         width: 280px;
         height: 77px;
         display: grid;
         place-items: center;
         cursor: pointer;
+        border-radius: 0 20px 20px 0;
+        transition: 0.4s all ease;
         h4 {
           font-family: "firaGo-regular";
           font-size: 24px;
@@ -205,6 +225,10 @@ body {
           font-family: "firaGo-light";
           font-size: 15px;
         }
+      }
+      .format1.selected {
+        background-color: #000;
+        color: #fff;
       }
     }
   }
