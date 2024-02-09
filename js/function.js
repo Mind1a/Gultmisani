@@ -121,7 +121,6 @@ const download = document.querySelector(".download");
 const closePopup = document.querySelector(".close");
 const dinamicText = document.querySelector(".message");
 const blurtSection = document.querySelector(".main-section.blur");
-let mainActive = false;
 
 ortskhobila.addEventListener("click", function () {
   removeMainPage();
@@ -139,12 +138,6 @@ download.addEventListener("click", () => {
 closePopup.addEventListener("click", () => {
   cancelPopup();
 });
-
-if (mainActive) {
-  mainSection.addEventListener("click", () => {
-    cancelPopup();
-  });
-}
 
 function resetPages() {
   randomMessage.classList.add("disabled");
@@ -180,14 +173,11 @@ function typeText(el, txt, i = -1) {
 
   setTimeout(() => typeText(el, txt, i + 1), 80);
 }
-//! funqcia gamoidzaxe!!!!!!!
-//! typeText(header, word);
 
 function activateDownload() {
   RegularPopup.classList.add("active");
   mainSection.classList.add("blur");
   goBack.classList.add("none");
-  mainActive = !mainActive;
 }
 
 function cancelPopup() {
