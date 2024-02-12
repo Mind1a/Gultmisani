@@ -120,24 +120,40 @@ const mainSection = document.querySelector(".main-section");
 const download = document.querySelector(".download");
 const closePopup = document.querySelector(".close");
 const dinamicText = document.querySelector(".message");
+const clickText = document.querySelector(".click-text");
 const selectFormat1 = document.querySelector(".format");
 const selectFormat2 = document.querySelector(".format1");
 const blurtSection = document.querySelector(".main-section.blur");
+const overlay = document.querySelector(".overlay");
+
+let shouldStop = true;
 
 ortskhobila.addEventListener("click", function () {
+  shouldStop = false;
+  removeMainPage();
+  addNewSection();
+  displayMessage();
+});
+clickText.addEventListener("click", function () {
+  shouldStop = false;
   removeMainPage();
   addNewSection();
   displayMessage();
 });
 
 goBack.addEventListener("click", () => {
+  shouldStop = true;
   resetPages();
 });
 
 download.addEventListener("click", () => {
   activateDownload();
 });
+
 closePopup.addEventListener("click", () => {
+  cancelPopup();
+});
+overlay.addEventListener("click", () => {
   cancelPopup();
 });
 selectFormat1.addEventListener("click", () => {
@@ -178,7 +194,7 @@ function displayMessage() {
 
 function typeText(el, txt, i = -1) {
   el.textContent += txt[i];
-  if (i === txt.length - 1) {
+  if (i === txt.length - 1 || shouldStop) {
     return;
   }
 
@@ -186,12 +202,13 @@ function typeText(el, txt, i = -1) {
 }
 
 function activateDownload() {
+  overlay.classList.add("active");
   RegularPopup.classList.add("active");
   mainSection.classList.add("blur");
-  goBack.classList.add("none");
 }
 
 function cancelPopup() {
+  overlay.classList.remove("active");
   RegularPopup.classList.remove("active");
   mainSection.classList.remove("blur");
   goBack.classList.remove("none");
