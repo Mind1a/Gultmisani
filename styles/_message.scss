@@ -16,6 +16,7 @@
     align-items: center;
     gap: 4px;
     cursor: pointer;
+    margin-top: 94px;
     p {
       font-family: "firago-italic-light";
       opacity: 70%;
@@ -43,6 +44,16 @@
       text-align: center;
       padding: 5px;
       transition: 0.5s all ease;
+      &::before {
+        content: "*";
+        margin-right: 15px;
+        color: red;
+      }
+      &::after {
+        content: "*";
+        margin-left: 15px;
+        color: red;
+      }
     }
     .star {
       font-family: "Nika";

@@ -242,7 +242,7 @@ body .main-section {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 115px 0 55px 0;
@@ -348,6 +348,16 @@ body .popup-wrapper .close {
   cursor: pointer;
   transition: 0.4s all ease;
 }
+body .popup-wrapper .close .active-close {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+body .popup-wrapper .close .disabled-close {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
 body .popup-wrapper .select-format .instruction {
   font-family: "firaGo-medium";
   font-size: 24px;
@@ -442,6 +452,7 @@ body .overlay.active {
   align-items: center;
   gap: 4px;
   cursor: pointer;
+  margin-top: 94px;
 }
 .random-message .open-new p {
   font-family: "firago-italic-light";
@@ -470,6 +481,16 @@ body .overlay.active {
   text-align: center;
   padding: 5px;
   transition: 0.5s all ease;
+}
+.random-message .cookie-meesage .message::before {
+  content: "*";
+  margin-right: 15px;
+  color: red;
+}
+.random-message .cookie-meesage .message::after {
+  content: "*";
+  margin-left: 15px;
+  color: red;
 }
 .random-message .cookie-meesage .star {
   font-family: "Nika";
