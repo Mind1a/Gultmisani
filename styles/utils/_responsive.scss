@@ -1,27 +1,22 @@
-$pc: 1440px; // PC screen size.
+$pc: 1024px; // PC screen size.
 $tablet: 720px; // Tablet screen size.
-$phone: 430px; // Phone screen size.
-$iphone: 398px; //? es arvici zustad ori dizaini iyo telefonze
-
-$first: $tablet - 1;
-$second: $pc + 1;
+$phone: 320px; // Phone screen size.
 
 @mixin responsive($media) {
-  @if $media= phone {
-    @media only screen and (max-width: $first) {
-      //tablet - 1
+  @if $media == phone {
+    @media only screen and (max-width: $tablet) {
       @content;
     }
-  } @else if $media= tablet {
-    @media only screen and (min-width: $first) and (max-width: $pc) {
+  } @else if $media == tablet {
+    @media only screen and (min-width: $tablet) and (max-width: $pc) {
       @content;
     }
-  } @else if $media= pc {
-    @media only screen and (min-width: $second) and (min-width: $pc) {
+  } @else if $media == pc {
+    @media only screen and (min-width: $pc) and (min-width: $pc) {
       @content;
     }
-  } @else if $media= pc_tablet {
-    @media only screen and (min-width: $first) {
+  } @else if $media == pc_tablet {
+    @media only screen and (min-width: $tablet) {
       @content;
     }
   }
