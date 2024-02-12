@@ -125,8 +125,6 @@ const selectFormat1 = document.querySelector(".format");
 const selectFormat2 = document.querySelector(".format1");
 const blurtSection = document.querySelector(".main-section.blur");
 const overlay = document.querySelector(".overlay");
-const X = document.getElementById("X");
-const Xred = document.getElementById("Xred");
 
 let shouldStop = true;
 
@@ -150,18 +148,6 @@ goBack.addEventListener("click", () => {
 
 download.addEventListener("click", () => {
   activateDownload();
-  X.addEventListener("mouseenter", () => {
-    X.classList.remove("active-close");
-    X.classList.add("disabled-close");
-    Xred.classList.remove("disabled-close");
-    Xred.classList.add("active-close");
-  });
-  X.addEventListener("mouseout", () => {
-    X.classList.add("active-close");
-    X.classList.remove("disabled-close");
-    Xred.classList.add("disabled-close");
-    Xred.classList.remove("active-close");
-  });
 });
 
 closePopup.addEventListener("click", () => {

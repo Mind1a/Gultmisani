@@ -1,8 +1,9 @@
 body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 70px;
+  padding: 10px 70px;
   position: relative;
   .left-marquee {
     max-width: 64px;
@@ -61,12 +62,11 @@ body {
   .main-section {
     max-width: 1440px;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 115px 0 55px 0;
+    padding: 115px 0 0 0;
     .logo-wrapper {
       padding: 5px 0;
       display: grid;
@@ -170,15 +170,14 @@ body {
       align-self: flex-end;
       cursor: pointer;
       transition: 0.4s all ease;
-      .active-close {
-        display: block;
-        width: 30px;
-        height: 30px;
-      }
-      .disabled-close {
-        width: 30px;
-        height: 30px;
-        display: none;
+      .close-btn {
+        font-family: "firaGo-medium";
+        font-size: 26px;
+        font-weight: 400;
+        transition: all ease 0.3s;
+        &:hover {
+          color: red;
+        }
       }
     }
 
@@ -262,3 +261,16 @@ body {
     z-index: 10;
   }
 }
+
+// !responsive example
+// body {
+//   @include responsive(pc) {
+//     background: red;
+//   }
+//   @include responsive(tablet) {
+//     background: yellow;
+//   }
+//   @include responsive(phone) {
+//     background: green;
+//   }
+// }

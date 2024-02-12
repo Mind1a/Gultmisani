@@ -180,10 +180,11 @@ button {
   src: url(../../assets/fonts/Nika-Regular.ttf);
 }
 body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 70px;
+  padding: 10px 70px;
   position: relative;
 }
 body .left-marquee {
@@ -240,12 +241,11 @@ body .main-section.blur {
 body .main-section {
   max-width: 1440px;
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 115px 0 55px 0;
+  padding: 115px 0 0 0;
 }
 body .main-section .logo-wrapper {
   padding: 5px 0;
@@ -348,15 +348,14 @@ body .popup-wrapper .close {
   cursor: pointer;
   transition: 0.4s all ease;
 }
-body .popup-wrapper .close .active-close {
-  display: block;
-  width: 30px;
-  height: 30px;
+body .popup-wrapper .close .close-btn {
+  font-family: "firaGo-medium";
+  font-size: 26px;
+  font-weight: 400;
+  transition: all ease 0.3s;
 }
-body .popup-wrapper .close .disabled-close {
-  width: 30px;
-  height: 30px;
-  display: none;
+body .popup-wrapper .close .close-btn:hover {
+  color: red;
 }
 body .popup-wrapper .select-format .instruction {
   font-family: "firaGo-medium";
@@ -436,7 +435,6 @@ body .overlay.active {
 .random-message {
   max-width: 860px;
   width: 100%;
-  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -471,7 +469,7 @@ body .overlay.active {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 .random-message .cookie-meesage .message {
   font-family: "Nika";
