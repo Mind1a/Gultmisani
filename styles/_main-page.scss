@@ -5,6 +5,15 @@ body {
   align-items: center;
   padding: 10px 70px;
   position: relative;
+  @include responsive(pc) {
+    background: red;
+  }
+  @include responsive(tablet) {
+    background: yellow;
+  }
+  @include responsive(phone) {
+    background: green;
+  }
   .left-marquee {
     max-width: 64px;
     width: 100%;

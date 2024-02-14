@@ -92,16 +92,3 @@
 .random-message.disabled {
   display: none;
 }
-
-//! responsive example
-// body {
-//   @include responsive(pc) {
-//     background: red;
-//   }
-//   @include responsive(tablet) {
-//     background: yellow;
-//   }
-//   @include responsive(phone) {
-//     background: green;
-//   }
-// }

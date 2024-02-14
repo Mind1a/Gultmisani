@@ -23,3 +23,27 @@
 @mixin main_container($max-width: 1440px) {
   max-width: $max-width;
 }
+
+$pc: 1024px; // PC screen size.
+$tablet: 720px; // Tablet screen size.
+$phone: 320px; // Phone screen size.
+
+@mixin responsive($media) {
+  @if $media == phone {
+    @media only screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $tablet) and (max-width: $pc) {
+      @content;
+    }
+  } @else if $media == pc {
+    @media only screen and (min-width: $pc) and (min-width: $pc) {
+      @content;
+    }
+  } @else if $media == pc_tablet {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+}
