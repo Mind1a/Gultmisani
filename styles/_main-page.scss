@@ -5,272 +5,801 @@ body {
   align-items: center;
   padding: 10px 70px;
   position: relative;
-  .left-marquee {
-    max-width: 64px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: $font-color;
-    position: fixed;
-    top: 0;
-    left: 0;
-    .left {
-      width: 32px;
-      margin: 0 auto;
-      height: 100%;
-      img {
-        margin-bottom: 20px;
-      }
-      .star {
-        margin-left: 4px;
-      }
-    }
-  }
-  .right-marquee {
-    max-width: 64px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: $font-color;
-    position: fixed;
-    top: 0;
-    right: 0;
-    .right {
-      width: 32px;
-      margin: 0 auto;
-      height: 100%;
-      img {
-        margin-bottom: 20px;
-      }
-      .star2 {
-        margin-right: 4px;
-      }
-    }
-  }
-
-  .main-section.blur {
-    // ! blur effect
-    filter: blur(4px);
-  }
-
-  .main-section {
-    max-width: 1440px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 115px 0 0 0;
-    .logo-wrapper {
-      padding: 5px 0;
-      display: grid;
-      place-items: center;
-      img {
-        max-width: 411.23px;
-        width: 100%;
-      }
-    }
-    .ortskhobila.disabled {
-      display: none;
-    }
-    .ortskhobila.active {
-      display: flex;
-    }
-
-    .ortskhobila {
-      max-width: 500px;
+  @include responsive(pc) {
+    .left-marquee {
+      max-width: 64px;
       width: 100%;
-      position: relative;
-      display: grid;
-      place-items: center;
-      padding: 10px;
-      .cookie {
-        max-width: 436px;
-        width: 100%;
-        cursor: pointer;
-        transition: 0.5s all ease;
-        &:hover {
-          transform: scale(1.03);
-          transition: 0.5s all ease;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: $font-color;
+      position: fixed;
+      top: 0;
+      left: 0;
+      .left {
+        width: 32px;
+        margin: 0 auto;
+        height: 100%;
+        img {
+          margin-bottom: 20px;
+        }
+        .star {
+          margin-left: 4px;
         }
       }
-      .price-tag {
-        position: absolute;
-        right: 0px;
-        max-width: 151.4px;
-        width: 100%;
-      }
     }
-    .click-text {
-      p {
-        font-family: "firaGo-light";
-        font-size: 24px;
-        font-style: italic;
-        font-weight: 200;
-        line-height: 29px;
-        letter-spacing: 0em;
-        text-align: left;
-        cursor: pointer;
-      }
-    }
-    .click-text.disabled {
-      display: none;
-    }
-    .social-wrap {
-      width: 90%;
+    .right-marquee {
+      max-width: 64px;
+      width: 100%;
+      height: 100vh;
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-top: 100px;
-      padding-bottom: 80px;
-    }
-  }
-  .popup-wrapper {
-    display: none;
-    max-width: 662px;
-    width: 100%;
-    height: 331px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 26px;
-    background-color: #fff;
-    border: solid 2px #000;
-    border-radius: 24px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    z-index: 100;
-    .download-button {
-      width: 168px;
-      height: 47px;
-      display: grid;
-      place-items: center;
-      font-family: "firaGo-medium";
-      font-size: 24px;
-      border: solid 2px #000;
-      border-radius: 15px;
-      margin-top: 44px;
-      cursor: pointer;
-      transition: 0.4s all ease;
-      &:hover {
-        background-color: #000;
-        color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      }
-    }
-    .close {
-      align-self: flex-end;
-      cursor: pointer;
-      transition: 0.4s all ease;
-      .close-btn {
-        font-family: "firaGo-medium";
-        font-size: 26px;
-        font-weight: 400;
-        transition: all ease 0.3s;
-        &:hover {
-          color: red;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: $font-color;
+      position: fixed;
+      top: 0;
+      right: 0;
+      .right {
+        width: 32px;
+        margin: 0 auto;
+        height: 100%;
+        img {
+          margin-bottom: 20px;
+        }
+        .star2 {
+          margin-right: 4px;
         }
       }
     }
 
-    .select-format {
-      .instruction {
-        font-family: "firaGo-medium";
-        font-size: 24px;
-        margin-top: 14px;
+    .main-section.blur {
+      filter: blur(4px);
+    }
+
+    .main-section {
+      max-width: 1440px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 75px 0 0 0;
+      .logo-wrapper {
+        padding: 5px 0;
+        display: grid;
+        place-items: center;
+        img {
+          max-width: 411.23px;
+          width: 100%;
+        }
+      }
+      .ortskhobila.disabled {
+        display: none;
+      }
+      .ortskhobila.active {
+        display: flex;
+      }
+
+      .ortskhobila {
+        max-width: 500px;
+        width: 100%;
+        position: relative;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        .cookie {
+          max-width: 436px;
+          width: 100%;
+          cursor: pointer;
+          transition: 0.5s all ease;
+          &:hover {
+            transform: scale(1.03);
+            transition: 0.5s all ease;
+          }
+        }
+        .price-tag {
+          position: absolute;
+          right: 0px;
+          max-width: 151.4px;
+          width: 100%;
+        }
+      }
+      .click-text {
+        p {
+          font-family: "firaGo-light";
+          font-size: 20px;
+          font-style: italic;
+          font-weight: 200;
+          line-height: 29px;
+          letter-spacing: 0em;
+          text-align: left;
+          cursor: pointer;
+        }
+      }
+      .click-text.disabled {
+        display: none;
+      }
+      .social-wrap {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 40px;
       }
     }
-    .formats-wrap {
-      display: flex;
+    .popup-wrapper {
+      display: none;
+      max-width: 662px;
+      width: 100%;
+      height: 331px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 26px;
+      background-color: #fff;
       border: solid 2px #000;
       border-radius: 24px;
-      margin-top: 25px;
-      transition: all ease 0.4s;
-      &:hover {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100;
+      .download-button {
+        width: 168px;
+        height: 47px;
+        display: grid;
+        place-items: center;
+        font-family: "firaGo-medium";
+        font-size: 24px;
+        border: solid 2px #000;
+        border-radius: 15px;
+        margin-top: 44px;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      }
+      .close {
+        align-self: flex-end;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        .close-btn {
+          font-family: "firaGo-medium";
+          font-size: 26px;
+          font-weight: 400;
+          transition: all ease 0.3s;
+          &:hover {
+            color: red;
+          }
+        }
       }
 
-      .format {
-        width: 280px;
-        height: 77px;
-        display: grid;
-        place-items: center;
-        border-right: solid 2px #000;
-        border-radius: 20px 0 0 20px;
-        cursor: pointer;
-        transition: 0.4s all ease;
-        h4 {
-          font-family: "firaGo-regular";
+      .select-format {
+        .instruction {
+          font-family: "firaGo-medium";
           font-size: 24px;
-        }
-        p {
-          font-family: "firaGo-light";
-          font-size: 15px;
+          margin-top: 14px;
         }
       }
-      .format.selected {
-        background-color: #000;
-        color: #fff;
-      }
-      .format1 {
-        width: 280px;
-        height: 77px;
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-        border-radius: 0 20px 20px 0;
-        transition: 0.4s all ease;
-        h4 {
-          font-family: "firaGo-regular";
-          font-size: 24px;
+      .formats-wrap {
+        display: flex;
+        border: solid 2px #000;
+        border-radius: 24px;
+        margin-top: 25px;
+        transition: all ease 0.4s;
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
-        p {
-          font-family: "firaGo-light";
-          font-size: 15px;
+
+        .format {
+          width: 280px;
+          height: 77px;
+          display: grid;
+          place-items: center;
+          border-right: solid 2px #000;
+          border-radius: 20px 0 0 20px;
+          cursor: pointer;
+          transition: 0.4s all ease;
+          h4 {
+            font-family: "firaGo-regular";
+            font-size: 24px;
+          }
+          p {
+            font-family: "firaGo-light";
+            font-size: 15px;
+          }
         }
-      }
-      .format1.selected {
-        background-color: #000;
-        color: #fff;
+        .format.selected {
+          background-color: #000;
+          color: #fff;
+        }
+        .format1 {
+          width: 280px;
+          height: 77px;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+          border-radius: 0 20px 20px 0;
+          transition: 0.4s all ease;
+          h4 {
+            font-family: "firaGo-regular";
+            font-size: 24px;
+          }
+          p {
+            font-family: "firaGo-light";
+            font-size: 15px;
+          }
+        }
+        .format1.selected {
+          background-color: #000;
+          color: #fff;
+        }
       }
     }
-  }
-  .popup-wrapper.active {
-    display: flex;
-    animation: 1s ease-in popup;
-  }
+    .popup-wrapper.active {
+      display: flex;
+      animation: 1s ease-in popup;
+    }
 
-  .overlay {
-    display: none;
+    .overlay {
+      display: none;
+    }
+    .overlay.active {
+      width: 100%;
+      height: 100vh;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
   }
-  .overlay.active {
-    width: 100%;
-    height: 100vh;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+  @include responsive(tablet) {
+    .left-marquee {
+      max-width: 64px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: $font-color;
+      position: fixed;
+      top: 0;
+      left: 0;
+      .left {
+        width: 32px;
+        margin: 0 auto;
+        height: 100%;
+        img {
+          margin-bottom: 20px;
+        }
+        .star {
+          margin-left: 4px;
+        }
+      }
+    }
+    .right-marquee {
+      max-width: 64px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: $font-color;
+      position: fixed;
+      top: 0;
+      right: 0;
+      .right {
+        width: 32px;
+        margin: 0 auto;
+        height: 100%;
+        img {
+          margin-bottom: 20px;
+        }
+        .star2 {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .main-section.blur {
+      filter: blur(4px);
+    }
+
+    .main-section {
+      max-width: 1440px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 75px 0 0 0;
+      .logo-wrapper {
+        padding: 5px 0;
+        display: grid;
+        place-items: center;
+        img {
+          max-width: 411.23px;
+          width: 100%;
+        }
+      }
+      .ortskhobila.disabled {
+        display: none;
+      }
+      .ortskhobila.active {
+        display: flex;
+      }
+
+      .ortskhobila {
+        max-width: 500px;
+        width: 100%;
+        position: relative;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        .cookie {
+          max-width: 436px;
+          width: 100%;
+          cursor: pointer;
+          transition: 0.5s all ease;
+          &:hover {
+            transform: scale(1.03);
+            transition: 0.5s all ease;
+          }
+        }
+        .price-tag {
+          position: absolute;
+          right: 0px;
+          max-width: 151.4px;
+          width: 100%;
+        }
+      }
+      .click-text {
+        p {
+          font-family: "firaGo-light";
+          font-size: 22px;
+          font-style: italic;
+          font-weight: 200;
+          line-height: 29px;
+          letter-spacing: 0em;
+          text-align: left;
+          cursor: pointer;
+        }
+      }
+      .click-text.disabled {
+        display: none;
+      }
+      .social-wrap {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 40px;
+      }
+    }
+    .popup-wrapper {
+      display: none;
+      max-width: 562px;
+      width: 100%;
+      height: 331px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 26px;
+      background-color: #fff;
+      border: solid 2px #000;
+      border-radius: 24px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100;
+      .download-button {
+        width: 168px;
+        height: 47px;
+        display: grid;
+        place-items: center;
+        font-family: "firaGo-medium";
+        font-size: 24px;
+        border: solid 2px #000;
+        border-radius: 15px;
+        margin-top: 44px;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      }
+      .close {
+        align-self: flex-end;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        .close-btn {
+          font-family: "firaGo-medium";
+          font-size: 26px;
+          font-weight: 400;
+          transition: all ease 0.3s;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+
+      .select-format {
+        .instruction {
+          font-family: "firaGo-medium";
+          font-size: 24px;
+          margin-top: 14px;
+        }
+      }
+      .formats-wrap {
+        display: flex;
+        border: solid 2px #000;
+        border-radius: 24px;
+        margin-top: 25px;
+        transition: all ease 0.4s;
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .format {
+          width: 240px;
+          height: 77px;
+          display: grid;
+          place-items: center;
+          border-right: solid 2px #000;
+          border-radius: 20px 0 0 20px;
+          cursor: pointer;
+          transition: 0.4s all ease;
+          h4 {
+            font-family: "firaGo-regular";
+            font-size: 24px;
+          }
+          p {
+            font-family: "firaGo-light";
+            font-size: 15px;
+          }
+        }
+        .format.selected {
+          background-color: #000;
+          color: #fff;
+        }
+        .format1 {
+          width: 280px;
+          height: 77px;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+          border-radius: 0 20px 20px 0;
+          transition: 0.4s all ease;
+          h4 {
+            font-family: "firaGo-regular";
+            font-size: 24px;
+          }
+          p {
+            font-family: "firaGo-light";
+            font-size: 15px;
+          }
+        }
+        .format1.selected {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+    .popup-wrapper.active {
+      display: flex;
+      animation: 1s ease-in popup;
+    }
+
+    .overlay {
+      display: none;
+    }
+    .overlay.active {
+      width: 100%;
+      height: 100vh;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+  @include responsive(phone) {
+    padding: 10px 40px;
+    .left-marquee {
+      max-width: 34px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: $font-color;
+      position: fixed;
+      top: 0;
+      left: 0;
+      .left {
+        width: 22px;
+        margin: 0 auto;
+        height: 100%;
+        img {
+          width: 20px;
+          margin-bottom: 20px;
+        }
+        .star {
+          margin-left: 4px;
+        }
+      }
+    }
+    .right-marquee {
+      max-width: 34px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: $font-color;
+      position: fixed;
+      top: 0;
+      right: 0;
+      .right {
+        width: 22px;
+        margin: 0 auto;
+        height: 100%;
+        img {
+          width: 20px;
+          margin-bottom: 20px;
+        }
+        .star2 {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .main-section.blur {
+      filter: blur(4px);
+    }
+
+    .main-section {
+      max-width: 1440px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 75px 0 0 0;
+      .logo-wrapper {
+        padding: 5px 0;
+        display: grid;
+        place-items: center;
+        img {
+          max-width: 278px;
+          width: 100%;
+        }
+      }
+      .ortskhobila.disabled {
+        display: none;
+      }
+      .ortskhobila.active {
+        display: flex;
+      }
+
+      .ortskhobila {
+        max-width: 400px;
+        width: 100%;
+        position: relative;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        padding-top: 50px;
+        .cookie {
+          max-width: 436px;
+          width: 100%;
+          cursor: pointer;
+          transition: 0.5s all ease;
+          &:hover {
+            transform: scale(1.03);
+            transition: 0.5s all ease;
+          }
+        }
+        .price-tag {
+          position: absolute;
+          top: 20%;
+          right: 10.4px;
+          max-width: 101.4px;
+          width: 100%;
+        }
+      }
+      .click-text {
+        p {
+          font-family: "firaGo-light";
+          font-size: 14px;
+          font-style: italic;
+          font-weight: 200;
+          line-height: 29px;
+          letter-spacing: 0em;
+          text-align: left;
+          cursor: pointer;
+        }
+      }
+      .click-text.disabled {
+        display: none;
+      }
+      .social-wrap {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        .facebook {
+          a {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        .instagram {
+          a {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+    .popup-wrapper {
+      display: none;
+      max-width: 322px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px 26px 50px 26px;
+      padding-bottom: 50px;
+      background-color: #fff;
+      border: solid 2px #000;
+      border-radius: 24px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100;
+      .download-button {
+        width: 168px;
+        height: 47px;
+        display: grid;
+        place-items: center;
+        font-family: "firaGo-medium";
+        font-size: 24px;
+        border: solid 2px #000;
+        border-radius: 15px;
+        margin-top: 44px;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      }
+      .close {
+        align-self: flex-end;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        .close-btn {
+          font-family: "firaGo-medium";
+          font-size: 26px;
+          font-weight: 400;
+          transition: all ease 0.3s;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+
+      .select-format {
+        .instruction {
+          font-family: "firaGo-medium";
+          font-size: 24px;
+          margin-top: 14px;
+        }
+      }
+      .formats-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 2px #000;
+        border-radius: 24px;
+        margin-top: 25px;
+        transition: all ease 0.4s;
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .format {
+          width: 100%;
+          height: 73px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: 0.4s all ease;
+          border-bottom: solid 2px #000;
+          border-radius: 22px 22px 0 0;
+          h4 {
+            font-family: "firaGo-regular";
+            font-size: 20px;
+          }
+          p {
+            margin-top: 5px;
+            font-family: "firaGo-light";
+            font-size: 13px;
+          }
+        }
+        .format.selected {
+          background-color: #000;
+          color: #fff;
+        }
+        .format1 {
+          width: 280px;
+          height: 77px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: 0.4s all ease;
+          border-radius: 0 0 22px 22px;
+          h4 {
+            font-family: "firaGo-regular";
+            font-size: 20px;
+          }
+          p {
+            margin-top: 5px;
+            font-family: "firaGo-light";
+            font-size: 13px;
+          }
+        }
+        .format1.selected {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+    .popup-wrapper.active {
+      display: flex;
+      animation: 0.4s ease-in popup;
+    }
+
+    .overlay {
+      display: none;
+    }
+    .overlay.active {
+      width: 100%;
+      height: 100vh;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+  @include responsive(mini_phone) {
+    // background-color: aqua;
   }
 }
-
-// !responsive example
-// body {
-//   @include responsive(pc) {
-//     background: red;
-//   }
-//   @include responsive(tablet) {
-//     background: yellow;
-//   }
-//   @include responsive(phone) {
-//     background: green;
-//   }
-// }
