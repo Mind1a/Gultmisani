@@ -1,3 +1,8 @@
+$pc: 1280px;
+$tablet: 720px;
+$phone: 420px;
+$mini_phone: 320px;
+
 @mixin flex($justify: center, $align: center) {
   display: flex;
   justify-content: $justify;
@@ -24,10 +29,6 @@
   max-width: $max-width;
 }
 
-$pc: 1024px; // PC screen size.
-$tablet: 720px; // Tablet screen size.
-$phone: 320px; // Phone screen size.
-
 @mixin responsive($media) {
   @if $media == phone {
     @media only screen and (max-width: $tablet) {
@@ -41,8 +42,8 @@ $phone: 320px; // Phone screen size.
     @media only screen and (min-width: $pc) and (min-width: $pc) {
       @content;
     }
-  } @else if $media == pc_tablet {
-    @media only screen and (min-width: $tablet) {
+  } @else if $media == mini_phone {
+    @media only screen and (max-width: $phone) {
       @content;
     }
   }

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   .open-new.none {
     opacity: 0;
   }
@@ -29,6 +30,18 @@
         opacity: 100%;
       }
     }
+  }
+  @include responsive(pc) {
+    background: red;
+  }
+  @include responsive(tablet) {
+    background: yellow;
+  }
+  @include responsive(phone) {
+    background: green;
+  }
+  @include responsive(mini_phone) {
+    background-color: aqua;
   }
   .cookie-meesage {
     width: 100%;
