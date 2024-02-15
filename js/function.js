@@ -107,6 +107,7 @@ let inEnglish = [
 
 // ! random number functionality
 let randomNumber, word;
+console.log(window.innerHeight);
 
 //! HTML ELEMENTS
 
@@ -125,7 +126,7 @@ const selectFormat1 = document.querySelector(".format");
 const selectFormat2 = document.querySelector(".format1");
 const blurtSection = document.querySelector(".main-section.blur");
 const overlay = document.querySelector(".overlay");
-
+const logo = document.querySelector(".logo");
 let shouldStop = true;
 
 ortskhobila.addEventListener("click", function () {
@@ -146,6 +147,10 @@ goBack.addEventListener("click", () => {
   resetPages();
 });
 
+logo.addEventListener("click", () => {
+  shouldStop = true;
+  resetPages();
+});
 download.addEventListener("click", () => {
   activateDownload();
 });

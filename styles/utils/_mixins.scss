@@ -1,7 +1,7 @@
 $pc: 1280px;
-$tablet: 720px;
-$phone: 420px;
-$mini_phone: 320px;
+$tablet: 740px;
+$phone: 450px;
+$mini_phone: 330px;
 
 @mixin flex($justify: center, $align: center) {
   display: flex;
