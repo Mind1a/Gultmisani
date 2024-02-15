@@ -17,10 +17,17 @@
     align-items: center;
     gap: 4px;
     cursor: pointer;
-    margin-top: 94px;
+    margin-top: 54px;
+    margin-left: 34px;
+    @include responsive(phone) {
+      margin-left: 0;
+    }
     p {
       font-family: "firago-italic-light";
       opacity: 70%;
+      @include responsive(phone) {
+        font-size: 11px;
+      }
     }
     .image-svg {
       height: 20px;
@@ -28,6 +35,10 @@
       place-items: center;
       img {
         opacity: 100%;
+        @include responsive(phone) {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
   }
@@ -51,11 +62,13 @@
       transition: 0.5s all ease;
       &::before {
         content: "*";
+        font-family: "Nika";
         margin-right: 15px;
         color: red;
       }
       &::after {
         content: "*";
+        font-family: "Nika";
         margin-left: 15px;
         color: red;
       }
@@ -64,20 +77,8 @@
       }
       @include responsive(phone) {
         font-size: 30px;
+        line-height: 36px;
       }
-    }
-    .star {
-      font-family: "Nika";
-      color: $stars-color;
-      font-size: 64px;
-      margin-right: 50px;
-    }
-    .star1 {
-      font-family: "Nika";
-      color: $stars-color;
-      font-size: 64px;
-      align-self: flex-start;
-      margin-left: 5px;
     }
   }
   .download {
@@ -92,10 +93,22 @@
       font-size: 24px;
       font-style: italic;
       line-height: 29px;
-      letter-spacing: 0em;
       text-align: left;
       color: #000;
       opacity: 0.8;
+      transition: all ease 0.5s;
+      @include responsive(phone) {
+        font-size: 20px;
+        transition: all ease 0.5s;
+      }
+    }
+    img {
+      transition: all ease 0.5s;
+      @include responsive(phone) {
+        transition: all ease 0.5s;
+        width: 66px;
+        height: 42px;
+      }
     }
   }
 }
