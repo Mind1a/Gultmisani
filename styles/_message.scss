@@ -79,6 +79,9 @@
         font-size: 30px;
         line-height: 36px;
       }
+      @include responsive(mini_phone) {
+        font-size: 24px;
+      }
     }
   }
   .download {

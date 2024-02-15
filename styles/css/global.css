@@ -187,7 +187,7 @@ body {
   padding: 10px 70px;
   position: relative;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   body {
     padding: 10px 50px;
   }
@@ -216,7 +216,7 @@ body .left-marquee .left img {
 body .left-marquee .left .star {
   margin-right: 4px;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   body .left-marquee {
     max-width: 30px;
   }
@@ -251,7 +251,7 @@ body .right-marquee .right img {
 body .right-marquee .right .star2 {
   margin-right: 4px;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   body .right-marquee {
     max-width: 30px;
   }
@@ -270,8 +270,7 @@ body .main-section {
   width: 100%;
   height: 80%;
   display: flex;
-  gap: 40px;
-  justify-content: center;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
 }
@@ -286,7 +285,7 @@ body .main-section .logo-wrapper img {
   width: 100%;
   transition: all ease 0.5s;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   body .main-section .logo-wrapper img {
     transition: all ease 0.5s;
     max-width: 278px;
@@ -356,7 +355,7 @@ body .main-section .social-wrap {
   align-items: flex-start;
   margin-top: 40px;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   body .main-section .social-wrap {
     justify-content: center;
   }
@@ -364,9 +363,23 @@ body .main-section .social-wrap {
     width: 44px;
     height: 44px;
   }
+}
+@media only screen and (max-width: 740px) and (max-width: 450px) {
+  body .main-section .social-wrap .facebook a img {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media only screen and (max-width: 740px) {
   body .main-section .social-wrap .instagram a img {
     width: 44px;
     height: 44px;
+  }
+}
+@media only screen and (max-width: 740px) and (max-width: 450px) {
+  body .main-section .social-wrap .instagram a img {
+    width: 36px;
+    height: 36px;
   }
 }
 body .popup-wrapper {
@@ -387,6 +400,31 @@ body .popup-wrapper {
   align-items: center;
   z-index: 100;
 }
+@media only screen and (max-width: 780px) {
+  body .popup-wrapper {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper {
+    max-width: 322px;
+    min-height: 443px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body .popup-wrapper {
+    max-width: 280px;
+    min-height: 443px;
+    padding: 0 13px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper {
+    max-width: 200px;
+    min-height: 343px;
+    padding: 0 13px;
+  }
+}
 body .popup-wrapper .download-button {
   width: 168px;
   height: 47px;
@@ -404,6 +442,12 @@ body .popup-wrapper .download-button:hover {
   background-color: #000;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .download-button {
+    width: 100px;
+    font-size: 14px;
+  }
 }
 body .popup-wrapper .close {
   align-self: flex-end;
@@ -424,6 +468,11 @@ body .popup-wrapper .select-format .instruction {
   font-size: 24px;
   margin-top: 14px;
 }
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .select-format .instruction {
+    font-size: 17px;
+  }
+}
 body .popup-wrapper .formats-wrap {
   display: flex;
   border: solid 2px #000;
@@ -433,6 +482,19 @@ body .popup-wrapper .formats-wrap {
 }
 body .popup-wrapper .formats-wrap:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media only screen and (max-width: 740px) {
+  body .popup-wrapper .formats-wrap {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap {
+    max-width: 343px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 body .popup-wrapper .formats-wrap .format {
   width: 280px;
@@ -444,13 +506,46 @@ body .popup-wrapper .formats-wrap .format {
   cursor: pointer;
   transition: 0.4s all ease;
 }
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format {
+    width: 100%;
+    border-right: 0;
+    border-bottom: solid 2px #000;
+    border-radius: 21px 21px 0 0;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format {
+    height: 60px;
+  }
+}
 body .popup-wrapper .formats-wrap .format h4 {
   font-family: "firaGo-regular";
   font-size: 24px;
 }
+@media only screen and (max-width: 740px) {
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 15px;
+  }
+}
 body .popup-wrapper .formats-wrap .format p {
   font-family: "firaGo-light";
   font-size: 15px;
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format p {
+    font-size: 13px;
+  }
 }
 body .popup-wrapper .formats-wrap .format.selected {
   background-color: #000;
@@ -465,9 +560,31 @@ body .popup-wrapper .formats-wrap .format1 {
   border-radius: 0 20px 20px 0;
   transition: 0.4s all ease;
 }
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format1 {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format1 {
+    width: 100%;
+    border: 0;
+    border-radius: 0 0 21px 21px;
+  }
+}
 body .popup-wrapper .formats-wrap .format1 h4 {
   font-family: "firaGo-regular";
   font-size: 24px;
+}
+@media only screen and (max-width: 740px) {
+  body .popup-wrapper .formats-wrap .format1 h4 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format1 h4 {
+    font-size: 15px;
+  }
 }
 body .popup-wrapper .formats-wrap .format1 p {
   font-family: "firaGo-light";
@@ -516,7 +633,7 @@ body .overlay.active {
   margin-top: 54px;
   margin-left: 34px;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   .random-message .open-new {
     margin-left: 0;
   }
@@ -525,7 +642,7 @@ body .overlay.active {
   font-family: "firago-italic-light";
   opacity: 70%;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   .random-message .open-new p {
     font-size: 11px;
   }
@@ -538,7 +655,7 @@ body .overlay.active {
 .random-message .open-new .image-svg img {
   opacity: 100%;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   .random-message .open-new .image-svg img {
     width: 10px;
     height: 10px;
@@ -572,15 +689,20 @@ body .overlay.active {
   margin-left: 15px;
   color: red;
 }
-@media only screen and (min-width: 720px) and (max-width: 1280px) {
+@media only screen and (min-width: 740px) and (max-width: 1280px) {
   .random-message .cookie-meesage .message {
     font-size: 39px;
   }
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   .random-message .cookie-meesage .message {
     font-size: 30px;
     line-height: 36px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .random-message .cookie-meesage .message {
+    font-size: 24px;
   }
 }
 .random-message .download {
@@ -601,7 +723,7 @@ body .overlay.active {
   opacity: 0.8;
   transition: all ease 0.5s;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   .random-message .download p {
     font-size: 20px;
     transition: all ease 0.5s;
@@ -610,7 +732,7 @@ body .overlay.active {
 .random-message .download img {
   transition: all ease 0.5s;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   .random-message .download img {
     transition: all ease 0.5s;
     width: 66px;

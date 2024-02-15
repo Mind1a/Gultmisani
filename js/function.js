@@ -107,6 +107,7 @@ let inEnglish = [
 
 // ! random number functionality
 let randomNumber, word;
+console.log(window.innerHeight);
 
 //! HTML ELEMENTS
 
