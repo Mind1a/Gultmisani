@@ -4,6 +4,12 @@
   padding: 70px;
   position: relative;
 }
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body {
+    width: 1200px;
+    height: 1200px;
+  }
+}
 .body .left-title {
   width: 70px;
   height: 100%;
@@ -20,6 +26,16 @@
 .body .left-title img {
   width: 26px;
   height: 444px;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .left-title {
+    height: 1100px;
+    padding-top: 36px;
+  }
+  .body .left-title img {
+    width: 30px;
+    height: 523px;
+  }
 }
 .body .right-title {
   width: 70px;
@@ -38,6 +54,17 @@
   width: 26px;
   height: 444px;
 }
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .right-title {
+    height: 1150px;
+    padding-top: 36px;
+    top: 0;
+  }
+  .body .right-title img {
+    width: 30px;
+    height: 523px;
+  }
+}
 .body .top-title {
   width: 100%;
   height: 70px;
@@ -50,8 +77,20 @@
   top: 0;
 }
 .body .top-title img {
-  width: 482px;
+  width: 100%;
   height: 29px;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .top-title {
+    width: 1150px;
+    left: 0;
+    top: 0;
+    gap: 25px;
+  }
+  .body .top-title img {
+    height: 31px;
+    width: 526px;
+  }
 }
 .body .bottom-title {
   width: 100%;
@@ -76,6 +115,17 @@
   position: absolute;
   left: 30px;
 }
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .bottom-title {
+    right: 0;
+    bottom: 0;
+    gap: 35px;
+  }
+  .body .bottom-title img {
+    height: 31px;
+    width: 526px;
+  }
+}
 .body .download-story {
   max-width: 1080px;
   width: 100%;
@@ -84,6 +134,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .download-story {
+    width: 1200px;
+    height: 1200px;
+  }
 }
 .body .download-story .logo-wrapper {
   display: grid;
@@ -354,6 +410,11 @@ body {
     padding: 10px 50px;
   }
 }
+@media screen and (max-height: 800px) {
+  body {
+    height: auto;
+  }
+}
 body .left-marquee {
   max-width: 64px;
   width: 100%;
@@ -433,6 +494,7 @@ body .main-section {
   height: 80%;
   display: flex;
   gap: 20px;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }

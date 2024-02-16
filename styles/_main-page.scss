@@ -8,7 +8,9 @@ body {
   @include responsive(phone) {
     padding: 10px 50px;
   }
-
+  @media screen and (max-height: 800px) {
+    height: auto;
+  }
   .left-marquee {
     max-width: 64px;
     width: 100%;
@@ -86,7 +88,7 @@ body {
     height: 80%;
     display: flex;
     gap: 20px;
-    // justify-content: center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 
