@@ -1,0 +1,161 @@
+// ! Download Story Size
+.body {
+  width: 1080px;
+  height: 1920px;
+  padding: 70px;
+  position: relative;
+  .left-title {
+    width: 70px;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    z-index: 106;
+    img {
+      width: 26px;
+      height: 444px;
+    }
+  }
+  .right-title {
+    width: 70px;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 101;
+    img {
+      width: 26px;
+      height: 444px;
+    }
+  }
+  .top-title {
+    width: 100%;
+    height: 70px;
+    padding-left: 25px;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    img {
+      width: 482px;
+      height: 29px;
+    }
+  }
+  .bottom-title {
+    width: 100%;
+    height: 70px;
+    padding-right: 30px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 102;
+    img {
+      width: 482px;
+      height: 29px;
+    }
+    .left-star {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 30px;
+    }
+  }
+  .download-story {
+    max-width: 1080px;
+    width: 100%;
+    height: 1620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .logo-wrapper {
+      display: grid;
+      place-items: center;
+      .logo {
+        width: 630px;
+        height: 172px;
+        object-fit: cover;
+      }
+    }
+    .text-wrapper {
+      max-width: 710px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .header {
+        font-family: "firaGO-light";
+        font-size: 32px;
+        font-style: italic;
+        line-height: 29px;
+        text-align: left;
+        color: #000;
+        opacity: 0.8;
+        transition: all ease 0.5s;
+      }
+      .text {
+        font-family: "Nika";
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 75px;
+        text-align: center;
+        margin-top: 36px;
+        transition: 0.5s all ease;
+        &::before {
+          content: "*";
+          font-family: "Nika";
+          margin-right: 15px;
+          color: red;
+        }
+        &::after {
+          content: "*";
+          font-family: "Nika";
+          margin-left: 15px;
+          color: red;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .header {
+        padding: 10px;
+        font-family: "firaGO-light";
+        font-size: 32px;
+        font-style: italic;
+        line-height: 29px;
+        text-align: left;
+        color: #000;
+        opacity: 0.8;
+        transition: all ease 0.5s;
+        border-bottom: 1px solid #898989;
+      }
+      .link {
+        font-family: "firaGo-regular";
+        font-size: 32px;
+        color: #000;
+        margin-top: 8px;
+      }
+      .qrcode {
+        margin-top: 16px;
+      }
+    }
+  }
+}
