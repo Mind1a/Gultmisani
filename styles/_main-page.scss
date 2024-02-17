@@ -91,7 +91,12 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
+    @media screen and (max-height: 630px) {
+      gap: 50px;
+    }
+    @media screen and (max-height: 630px) and (max-width: 1050px) {
+      gap: 40px;
+    }
     .logo-wrapper {
       padding: 5px 0;
       display: grid;
@@ -105,6 +110,9 @@ body {
           transition: all ease 0.5s;
           max-width: 278px;
           width: 100%;
+        }
+        @media screen and (max-height: 630px) and (max-width: 1050px) {
+          max-width: 278px;
         }
       }
     }
@@ -121,6 +129,12 @@ body {
       position: relative;
       display: grid;
       place-items: center;
+      @media screen and (max-height: 730px) {
+        max-width: 356px;
+      }
+      @include responsive(phone) {
+        max-width: 356px;
+      }
       @include responsive(mini_phone) {
         margin-top: 70px;
       }
@@ -132,6 +146,9 @@ body {
         &:hover {
           transform: scale(1.03);
           transition: 0.5s all ease;
+        }
+        @media screen and (max-height: 630px) and (max-width: 1050px) {
+          max-width: 308px;
         }
       }
       .price-tag {
@@ -145,6 +162,10 @@ body {
           height: 70px;
           top: 15px;
           right: 5px;
+        }
+        @media screen and (max-height: 630px) and (max-width: 1050px) {
+          max-width: 108px;
+          right: 30px;
         }
       }
     }
@@ -169,6 +190,9 @@ body {
       justify-content: flex-start;
       align-items: flex-start;
       margin-top: 40px;
+      @media screen and (max-height: 730px) {
+        margin-top: 10px;
+      }
       @include responsive(phone) {
         justify-content: center;
         .facebook {
