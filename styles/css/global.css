@@ -820,7 +820,7 @@ body .popup-wrapper .formats-wrap .format1.selected {
 }
 body .popup-wrapper.active {
   display: flex;
-  animation: 1s ease-in popup;
+  animation: 0.5s ease-in popup;
 }
 body .overlay {
   display: none;

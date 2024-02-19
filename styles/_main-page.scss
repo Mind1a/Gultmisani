@@ -380,7 +380,7 @@ body {
   }
   .popup-wrapper.active {
     display: flex;
-    animation: 1s ease-in popup;
+    animation: 0.5s ease-in popup;
   }
 
   .overlay {

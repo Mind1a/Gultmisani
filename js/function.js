@@ -106,7 +106,7 @@ let inEnglish = [
 ];
 //!Variables for functions
 let randomNumber, word;
-
+let transferData = "";
 //! HTML ELEMENTS
 const ortskhobila = document.querySelector(".ortskhobila");
 const ortskhobilaClick = document.querySelector(".click-text");
@@ -195,6 +195,8 @@ function displayMessage() {
   word = InGeorgia[randomNumber];
   dinamicText.textContent = "";
   dinamicText.textContent = typeText(dinamicText, word);
+  transferData = word;
+  localStorage.setItem("randomMessage", transferData);
 }
 
 function typeText(el, txt, i = -1) {
@@ -203,7 +205,7 @@ function typeText(el, txt, i = -1) {
     return;
   }
 
-  setTimeout(() => typeText(el, txt, i + 1), 80);
+  setTimeout(() => typeText(el, txt, i + 1), 50);
 }
 
 function activateDownload() {
