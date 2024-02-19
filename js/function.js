@@ -104,13 +104,10 @@ let inEnglish = [
   "Life is a journey of discovery – explore, learn, and savor the adventure",
   "You are a masterpiece of the universe – embrace your brilliance and let it radiate",
 ];
-
-// ! random number functionality
+//!Variables for functions
 let randomNumber, word;
-console.log(window.innerHeight);
 
 //! HTML ELEMENTS
-
 const ortskhobila = document.querySelector(".ortskhobila");
 const ortskhobilaClick = document.querySelector(".click-text");
 const randomMessage = document.querySelector(".random-message");
@@ -129,6 +126,7 @@ const overlay = document.querySelector(".overlay");
 const logo = document.querySelector(".logo");
 let shouldStop = true;
 
+//!Event listeners
 ortskhobila.addEventListener("click", function () {
   shouldStop = false;
   removeMainPage();
@@ -170,6 +168,8 @@ selectFormat2.addEventListener("click", () => {
   selectFormat1.classList.remove("selected");
   addSelected(selectFormat2);
 });
+
+// !Functions
 
 function resetPages() {
   randomMessage.classList.add("disabled");
