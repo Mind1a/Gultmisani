@@ -104,12 +104,10 @@ let inEnglish = [
   "Life is a journey of discovery – explore, learn, and savor the adventure",
   "You are a masterpiece of the universe – embrace your brilliance and let it radiate",
 ];
-
-// ! random number functionality
+//!Variables for functions
 let randomNumber, word;
-
+let transferData = "";
 //! HTML ELEMENTS
-
 const ortskhobila = document.querySelector(".ortskhobila");
 const ortskhobilaClick = document.querySelector(".click-text");
 const randomMessage = document.querySelector(".random-message");
@@ -125,9 +123,10 @@ const selectFormat1 = document.querySelector(".format");
 const selectFormat2 = document.querySelector(".format1");
 const blurtSection = document.querySelector(".main-section.blur");
 const overlay = document.querySelector(".overlay");
-
+const logo = document.querySelector(".logo");
 let shouldStop = true;
 
+//!Event listeners
 ortskhobila.addEventListener("click", function () {
   shouldStop = false;
   removeMainPage();
@@ -146,6 +145,10 @@ goBack.addEventListener("click", () => {
   resetPages();
 });
 
+logo.addEventListener("click", () => {
+  shouldStop = true;
+  resetPages();
+});
 download.addEventListener("click", () => {
   activateDownload();
 });
@@ -165,6 +168,8 @@ selectFormat2.addEventListener("click", () => {
   selectFormat1.classList.remove("selected");
   addSelected(selectFormat2);
 });
+
+// !Functions
 
 function resetPages() {
   randomMessage.classList.add("disabled");
@@ -190,6 +195,8 @@ function displayMessage() {
   word = InGeorgia[randomNumber];
   dinamicText.textContent = "";
   dinamicText.textContent = typeText(dinamicText, word);
+  transferData = word;
+  localStorage.setItem("randomMessage", transferData);
 }
 
 function typeText(el, txt, i = -1) {
@@ -198,7 +205,7 @@ function typeText(el, txt, i = -1) {
     return;
   }
 
-  setTimeout(() => typeText(el, txt, i + 1), 80);
+  setTimeout(() => typeText(el, txt, i + 1), 50);
 }
 
 function activateDownload() {

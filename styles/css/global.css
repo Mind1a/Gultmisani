@@ -1,3 +1,221 @@
+.body {
+  width: 1080px;
+  height: 1920px;
+  padding: 70px;
+  position: relative;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body {
+    width: 1200px;
+    height: 1200px;
+  }
+}
+.body .left-title {
+  width: 70px;
+  height: 95%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  z-index: 106;
+}
+.body .left-title img {
+  width: 26px;
+  height: 444px;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .left-title {
+    height: 1100px;
+    padding-top: 36px;
+  }
+  .body .left-title img {
+    width: 30px;
+    height: 523px;
+  }
+}
+.body .right-title {
+  width: 70px;
+  height: 97%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 101;
+}
+.body .right-title img {
+  width: 26px;
+  height: 444px;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .right-title {
+    height: 1150px;
+    padding-top: 36px;
+    top: 0;
+  }
+  .body .right-title img {
+    width: 30px;
+    height: 523px;
+  }
+}
+.body .top-title {
+  width: 100%;
+  height: 70px;
+  padding-right: 45px;
+  background-color: #000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+.body .top-title img {
+  width: 100%;
+  height: 29px;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .top-title {
+    width: 1150px;
+    left: 0;
+    top: 0;
+    gap: 25px;
+  }
+  .body .top-title img {
+    height: 31px;
+    width: 526px;
+  }
+}
+.body .bottom-title {
+  width: 100%;
+  height: 70px;
+  padding-right: 30px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 102;
+}
+.body .bottom-title img {
+  width: 482px;
+  height: 29px;
+}
+.body .bottom-title .left-star {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 30px;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .bottom-title {
+    right: 0;
+    bottom: 0;
+    gap: 35px;
+  }
+  .body .bottom-title img {
+    height: 31px;
+    width: 526px;
+  }
+}
+.body .download-story {
+  max-width: 1080px;
+  width: 100%;
+  height: 1620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media only screen and (max-width: 1200px) and (max-height: 1200px) {
+  .body .download-story {
+    width: 1200px;
+    height: 1200px;
+  }
+}
+.body .download-story .logo-wrapper {
+  display: grid;
+  place-items: center;
+}
+.body .download-story .logo-wrapper .logo {
+  width: 630px;
+  height: 172px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.body .download-story .text-wrapper {
+  max-width: 710px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body .download-story .text-wrapper .header {
+  font-family: "firaGO-light";
+  font-size: 32px;
+  font-style: italic;
+  line-height: 29px;
+  text-align: left;
+  color: #000;
+  opacity: 0.8;
+  transition: all ease 0.5s;
+}
+.body .download-story .text-wrapper .text {
+  font-family: "Nika";
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 75px;
+  text-align: center;
+  margin-top: 36px;
+  transition: 0.5s all ease;
+}
+.body .download-story .text-wrapper .text::before {
+  content: "*";
+  font-family: "Nika";
+  margin-right: 15px;
+  color: red;
+}
+.body .download-story .text-wrapper .text::after {
+  content: "*";
+  font-family: "Nika";
+  margin-left: 15px;
+  color: red;
+}
+.body .download-story .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body .download-story .footer .header {
+  padding: 10px;
+  font-family: "firaGO-light";
+  font-size: 32px;
+  font-style: italic;
+  line-height: 29px;
+  text-align: left;
+  color: #000;
+  opacity: 0.8;
+  transition: all ease 0.5s;
+  border-bottom: 1px solid #898989;
+}
+.body .download-story .footer .link {
+  font-family: "firaGo-regular";
+  font-size: 32px;
+  color: #000;
+  margin-top: 8px;
+}
+.body .download-story .footer .qrcode {
+  margin-top: 16px;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -187,6 +405,16 @@ body {
   padding: 10px 70px;
   position: relative;
 }
+@media only screen and (max-width: 740px) {
+  body {
+    padding: 10px 50px;
+  }
+}
+@media screen and (max-height: 800px) {
+  body {
+    height: auto;
+  }
+}
 body .left-marquee {
   max-width: 64px;
   width: 100%;
@@ -209,7 +437,18 @@ body .left-marquee .left img {
   margin-bottom: 20px;
 }
 body .left-marquee .left .star {
-  margin-left: 4px;
+  margin-right: 4px;
+}
+@media only screen and (max-width: 740px) {
+  body .left-marquee {
+    max-width: 30px;
+  }
+  body .left-marquee .left {
+    width: 16px;
+  }
+  body .left-marquee .left img {
+    width: 16px;
+  }
 }
 body .right-marquee {
   max-width: 64px;
@@ -235,26 +474,62 @@ body .right-marquee .right img {
 body .right-marquee .right .star2 {
   margin-right: 4px;
 }
+@media only screen and (max-width: 740px) {
+  body .right-marquee {
+    max-width: 30px;
+  }
+  body .right-marquee .right {
+    width: 16px;
+  }
+  body .right-marquee .right img {
+    width: 16px;
+  }
+}
 body .main-section.blur {
   filter: blur(4px);
 }
 body .main-section {
   max-width: 1440px;
   width: 100%;
+  height: 80%;
   display: flex;
+  gap: 20px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 115px 0 0 0;
+}
+@media screen and (max-height: 630px) {
+  body .main-section {
+    gap: 50px;
+  }
+}
+@media screen and (max-height: 630px) and (max-width: 1050px) {
+  body .main-section {
+    gap: 40px;
+  }
 }
 body .main-section .logo-wrapper {
   padding: 5px 0;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 body .main-section .logo-wrapper img {
   max-width: 411.23px;
   width: 100%;
+  transition: all ease 0.5s;
+}
+@media only screen and (max-width: 740px) {
+  body .main-section .logo-wrapper img {
+    transition: all ease 0.5s;
+    max-width: 278px;
+    width: 100%;
+  }
+}
+@media screen and (max-height: 630px) and (max-width: 1050px) {
+  body .main-section .logo-wrapper img {
+    max-width: 278px;
+  }
 }
 body .main-section .ortskhobila.disabled {
   display: none;
@@ -263,12 +538,26 @@ body .main-section .ortskhobila.active {
   display: flex;
 }
 body .main-section .ortskhobila {
-  max-width: 500px;
+  max-width: 436px;
   width: 100%;
   position: relative;
   display: grid;
   place-items: center;
-  padding: 10px;
+}
+@media screen and (max-height: 730px) {
+  body .main-section .ortskhobila {
+    max-width: 356px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  body .main-section .ortskhobila {
+    max-width: 356px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body .main-section .ortskhobila {
+    margin-top: 70px;
+  }
 }
 body .main-section .ortskhobila .cookie {
   max-width: 436px;
@@ -280,20 +569,40 @@ body .main-section .ortskhobila .cookie:hover {
   transform: scale(1.03);
   transition: 0.5s all ease;
 }
+@media screen and (max-height: 630px) and (max-width: 1050px) {
+  body .main-section .ortskhobila .cookie {
+    max-width: 308px;
+  }
+}
 body .main-section .ortskhobila .price-tag {
   position: absolute;
   right: 0px;
+  top: 30%;
   max-width: 151.4px;
   width: 100%;
 }
+@media only screen and (max-width: 450px) {
+  body .main-section .ortskhobila .price-tag {
+    max-width: 108px;
+    height: 70px;
+    top: 15px;
+    right: 5px;
+  }
+}
+@media screen and (max-height: 630px) and (max-width: 1050px) {
+  body .main-section .ortskhobila .price-tag {
+    max-width: 108px;
+    right: 30px;
+  }
+}
 body .main-section .click-text p {
   font-family: "firaGo-light";
-  font-size: 24px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 200;
   line-height: 29px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
 }
 body .main-section .click-text.disabled {
@@ -304,8 +613,39 @@ body .main-section .social-wrap {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 100px;
-  padding-bottom: 80px;
+  margin-top: 40px;
+}
+@media screen and (max-height: 730px) {
+  body .main-section .social-wrap {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  body .main-section .social-wrap {
+    justify-content: center;
+  }
+  body .main-section .social-wrap .facebook a img {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media only screen and (max-width: 740px) and (max-width: 450px) {
+  body .main-section .social-wrap .facebook a img {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  body .main-section .social-wrap .instagram a img {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media only screen and (max-width: 740px) and (max-width: 450px) {
+  body .main-section .social-wrap .instagram a img {
+    width: 36px;
+    height: 36px;
+  }
 }
 body .popup-wrapper {
   display: none;
@@ -325,6 +665,31 @@ body .popup-wrapper {
   align-items: center;
   z-index: 100;
 }
+@media only screen and (max-width: 780px) {
+  body .popup-wrapper {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper {
+    max-width: 322px;
+    min-height: 443px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body .popup-wrapper {
+    max-width: 280px;
+    min-height: 443px;
+    padding: 0 13px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper {
+    max-width: 200px;
+    min-height: 343px;
+    padding: 0 13px;
+  }
+}
 body .popup-wrapper .download-button {
   width: 168px;
   height: 47px;
@@ -342,6 +707,12 @@ body .popup-wrapper .download-button:hover {
   background-color: #000;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .download-button {
+    width: 100px;
+    font-size: 14px;
+  }
 }
 body .popup-wrapper .close {
   align-self: flex-end;
@@ -362,6 +733,11 @@ body .popup-wrapper .select-format .instruction {
   font-size: 24px;
   margin-top: 14px;
 }
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .select-format .instruction {
+    font-size: 17px;
+  }
+}
 body .popup-wrapper .formats-wrap {
   display: flex;
   border: solid 2px #000;
@@ -371,6 +747,19 @@ body .popup-wrapper .formats-wrap {
 }
 body .popup-wrapper .formats-wrap:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media only screen and (max-width: 740px) {
+  body .popup-wrapper .formats-wrap {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap {
+    max-width: 343px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 body .popup-wrapper .formats-wrap .format {
   width: 280px;
@@ -382,13 +771,46 @@ body .popup-wrapper .formats-wrap .format {
   cursor: pointer;
   transition: 0.4s all ease;
 }
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format {
+    width: 100%;
+    border-right: 0;
+    border-bottom: solid 2px #000;
+    border-radius: 21px 21px 0 0;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format {
+    height: 60px;
+  }
+}
 body .popup-wrapper .formats-wrap .format h4 {
   font-family: "firaGo-regular";
   font-size: 24px;
 }
+@media only screen and (max-width: 740px) {
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 15px;
+  }
+}
 body .popup-wrapper .formats-wrap .format p {
   font-family: "firaGo-light";
   font-size: 15px;
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format p {
+    font-size: 13px;
+  }
 }
 body .popup-wrapper .formats-wrap .format.selected {
   background-color: #000;
@@ -403,9 +825,31 @@ body .popup-wrapper .formats-wrap .format1 {
   border-radius: 0 20px 20px 0;
   transition: 0.4s all ease;
 }
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format1 {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  body .popup-wrapper .formats-wrap .format1 {
+    width: 100%;
+    border: 0;
+    border-radius: 0 0 21px 21px;
+  }
+}
 body .popup-wrapper .formats-wrap .format1 h4 {
   font-family: "firaGo-regular";
   font-size: 24px;
+}
+@media only screen and (max-width: 740px) {
+  body .popup-wrapper .formats-wrap .format1 h4 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  body .popup-wrapper .formats-wrap .format1 h4 {
+    font-size: 15px;
+  }
 }
 body .popup-wrapper .formats-wrap .format1 p {
   font-family: "firaGo-light";
@@ -417,7 +861,7 @@ body .popup-wrapper .formats-wrap .format1.selected {
 }
 body .popup-wrapper.active {
   display: flex;
-  animation: 1s ease-in popup;
+  animation: 0.5s ease-in popup;
 }
 body .overlay {
   display: none;
@@ -435,9 +879,17 @@ body .overlay.active {
 .random-message {
   max-width: 860px;
   width: 100%;
+  min-height: 435px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-height: 630px) {
+  .random-message {
+    min-height: 300px;
+    justify-content: initial;
+    gap: 10px;
+  }
 }
 .random-message .open-new.none {
   opacity: 0;
@@ -450,11 +902,27 @@ body .overlay.active {
   align-items: center;
   gap: 4px;
   cursor: pointer;
-  margin-top: 94px;
+  margin-top: 54px;
+  margin-left: 34px;
+}
+@media only screen and (max-width: 740px) {
+  .random-message .open-new {
+    margin-left: 0;
+  }
+}
+@media screen and (max-height: 630px) {
+  .random-message .open-new {
+    margin-top: 20px;
+  }
 }
 .random-message .open-new p {
   font-family: "firago-italic-light";
   opacity: 70%;
+}
+@media only screen and (max-width: 740px) {
+  .random-message .open-new p {
+    font-size: 11px;
+  }
 }
 .random-message .open-new .image-svg {
   height: 20px;
@@ -464,12 +932,23 @@ body .overlay.active {
 .random-message .open-new .image-svg img {
   opacity: 100%;
 }
+@media only screen and (max-width: 740px) {
+  .random-message .open-new .image-svg img {
+    width: 10px;
+    height: 10px;
+  }
+}
 .random-message .cookie-meesage {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 70px;
+}
+@media screen and (max-height: 630px) {
+  .random-message .cookie-meesage {
+    margin-top: 10px;
+  }
 }
 .random-message .cookie-meesage .message {
   font-family: "Nika";
@@ -482,26 +961,31 @@ body .overlay.active {
 }
 .random-message .cookie-meesage .message::before {
   content: "*";
+  font-family: "Nika";
   margin-right: 15px;
   color: red;
 }
 .random-message .cookie-meesage .message::after {
   content: "*";
+  font-family: "Nika";
   margin-left: 15px;
   color: red;
 }
-.random-message .cookie-meesage .star {
-  font-family: "Nika";
-  color: red;
-  font-size: 64px;
-  margin-right: 50px;
+@media only screen and (min-width: 740px) and (max-width: 1280px) {
+  .random-message .cookie-meesage .message {
+    font-size: 39px;
+  }
 }
-.random-message .cookie-meesage .star1 {
-  font-family: "Nika";
-  color: red;
-  font-size: 64px;
-  align-self: flex-start;
-  margin-left: 5px;
+@media only screen and (max-width: 740px) {
+  .random-message .cookie-meesage .message {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .random-message .cookie-meesage .message {
+    font-size: 24px;
+  }
 }
 .random-message .download {
   width: 100%;
@@ -509,17 +993,38 @@ body .overlay.active {
   place-items: center;
   gap: 10px;
   cursor: pointer;
-  margin-top: 150px;
+  margin-top: 50px;
+}
+@media screen and (max-height: 630px) {
+  .random-message .download {
+    margin-top: 0;
+  }
 }
 .random-message .download p {
   font-family: "firaGO-light";
   font-size: 24px;
   font-style: italic;
   line-height: 29px;
-  letter-spacing: 0em;
   text-align: left;
   color: #000;
   opacity: 0.8;
+  transition: all ease 0.5s;
+}
+@media only screen and (max-width: 740px) {
+  .random-message .download p {
+    font-size: 20px;
+    transition: all ease 0.5s;
+  }
+}
+.random-message .download img {
+  transition: all ease 0.5s;
+}
+@media only screen and (max-width: 740px) {
+  .random-message .download img {
+    transition: all ease 0.5s;
+    width: 66px;
+    height: 42px;
+  }
 }
 
 .random-message.disabled {
