@@ -23,23 +23,26 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    .left {
+    .left-marquee__inner {
       width: 32px;
       margin: 0 auto;
       height: 100%;
-      img {
-        margin-bottom: 20px;
-      }
-      .star {
-        margin-right: 4px;
+      .marquee__part {
+        img {
+          margin-bottom: 20px;
+        }
       }
     }
     @include responsive(phone) {
       max-width: 30px;
-      .left {
+      .left-marquee__inner {
         width: 16px;
-        img {
-          width: 16px;
+        .marquee__part {
+          img {
+            width: 16px;
+            margin-bottom: 13px;
+            object-fit: cover;
+          }
         }
       }
     }
@@ -56,23 +59,24 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    .right {
+    .right-marquee__inner {
       width: 32px;
       margin: 0 auto;
       height: 100%;
       img {
-        margin-bottom: 20px;
-      }
-      .star2 {
-        margin-right: 4px;
+        margin-bottom: 13px;
       }
     }
     @include responsive(phone) {
       max-width: 30px;
-      .right {
+      right: -2px;
+      .right-marquee__inner {
         width: 16px;
-        img {
+        .right-marquee__part {
           width: 16px;
+          img {
+            width: 16px;
+          }
         }
       }
     }
