@@ -107,6 +107,7 @@ let inEnglish = [
 //!Variables for functions
 let randomNumber, word;
 let transferData = "";
+let shouldStop = true;
 //! HTML ELEMENTS
 const ortskhobila = document.querySelector(".ortskhobila");
 const ortskhobilaClick = document.querySelector(".click-text");
@@ -124,7 +125,6 @@ const selectFormat2 = document.querySelector(".format1");
 const blurtSection = document.querySelector(".main-section.blur");
 const overlay = document.querySelector(".overlay");
 const logo = document.querySelector(".logo");
-let shouldStop = true;
 
 //!Event listeners
 ortskhobila.addEventListener("click", function () {
@@ -228,3 +228,29 @@ function addSelected(el) {
 function removeSelect(el) {
   el.classList.remove("selected");
 }
+
+// ! GSAP for Marquee element
+
+let tween = gsap
+  .to(".marquee__part", {
+    yPercent: 100,
+    repeat: -1,
+    duration: 8,
+    ease: "linear",
+  })
+  .totalProgress(0.5);
+
+gsap.set(".left-marquee__inner", { yPercent: -90 });
+
+//  "-40"
+
+let tween2 = gsap
+  .to(".right-marquee__part", {
+    yPercent: -100,
+    repeat: -1,
+    duration: 8,
+    ease: "linear",
+  })
+  .totalProgress(0.5);
+
+gsap.set(".right-marquee__inner", { yPercent: 0 });
