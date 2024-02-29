@@ -108,6 +108,14 @@ let inEnglish = [
 let randomNumber, word;
 let transferData = "";
 let shouldStop = true;
+let story_size = {
+  id_name: "iframe1",
+  isActive: false,
+};
+let square_size = {
+  id_name: "iframe",
+  isActive: false,
+};
 //! HTML ELEMENTS
 const ortskhobila = document.querySelector(".ortskhobila");
 const ortskhobilaClick = document.querySelector(".click-text");
@@ -160,11 +168,19 @@ overlay.addEventListener("click", () => {
   cancelPopup();
 });
 selectFormat1.addEventListener("click", () => {
+  if (square_size.isActive) {
+    square_size.isActive = false;
+  }
+  story_size.isActive = true;
   selectFormat2.classList.remove("selected");
   addSelected(selectFormat1);
 });
 
 selectFormat2.addEventListener("click", () => {
+  if (story_size.isActive) {
+    story_size.isActive = false;
+  }
+  square_size.isActive = true;
   selectFormat1.classList.remove("selected");
   addSelected(selectFormat2);
 });
@@ -254,3 +270,33 @@ let tween2 = gsap
   .totalProgress(0.5);
 
 gsap.set(".right-marquee__inner", { yPercent: 0 });
+
+// ! Download HTML as an image
+document.getElementById("download").addEventListener("click", function () {
+  if (story_size.isActive) {
+    let iframe = document.getElementById("iframe1");
+    iframe.onload = function () {
+      html2canvas(iframe.contentDocument.body).then(function (canvas) {
+        let link = document.createElement("a");
+        link.download = "screenshot.png";
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    };
+    //! Reload the iframe to ensure the onload event is triggered
+    iframe.contentWindow.location.reload();
+  } else if (square_size.isActive) {
+    let iframe = document.getElementById("iframe");
+    iframe.onload = function () {
+      html2canvas(iframe.contentDocument.body).then(function (canvas) {
+        let link = document.createElement("a");
+        link.download = "screenshot.png";
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    };
+    iframe.contentWindow.location.reload();
+  } else {
+    console.error("Select right resolution!");
+  }
+});
