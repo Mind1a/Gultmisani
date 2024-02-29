@@ -398,6 +398,10 @@ button {
   font-family: "Nika";
   src: url(../../assets/fonts/Nika-Regular.ttf);
 }
+html {
+  overflow: hidden;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -750,6 +754,18 @@ body .popup-wrapper .formats-wrap {
 body .popup-wrapper .formats-wrap:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+@media only screen and (max-width: 780px) {
+  body .popup-wrapper .formats-wrap {
+    max-width: 450px;
+    width: 100%;
+  }
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 18px;
+  }
+  body .popup-wrapper .formats-wrap .format1 h4 {
+    font-size: 18px;
+  }
+}
 @media only screen and (max-width: 740px) {
   body .popup-wrapper .formats-wrap {
     max-width: 450px;
@@ -789,6 +805,11 @@ body .popup-wrapper .formats-wrap .format {
 body .popup-wrapper .formats-wrap .format h4 {
   font-family: "firaGo-regular";
   font-size: 24px;
+}
+@media only screen and (max-width: 780px) {
+  body .popup-wrapper .formats-wrap .format h4 {
+    font-size: 18px;
+  }
 }
 @media only screen and (max-width: 740px) {
   body .popup-wrapper .formats-wrap .format h4 {
@@ -842,6 +863,11 @@ body .popup-wrapper .formats-wrap .format1 {
 body .popup-wrapper .formats-wrap .format1 h4 {
   font-family: "firaGo-regular";
   font-size: 24px;
+}
+@media only screen and (max-width: 780px) {
+  body .popup-wrapper .formats-wrap .format1 h4 {
+    font-size: 18px;
+  }
 }
 @media only screen and (max-width: 740px) {
   body .popup-wrapper .formats-wrap .format1 h4 {
