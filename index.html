@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,Nofollow">
-    <meta name="google" content="nositelinkssearchbox">
-    <meta name="description" content="Gultmisani ortskhobila">
-    <meta name="keywords" content="გულთმისანი ორცხობილა, წინასწარმეტყველება, ზოდიაქო, მოტივაცია, ნაპერწკალი, სამოტივაციო ფრაზები, ფრაზები მოტივაციისთვის, მოტივაცია მაკლია, იღბლის ორცხობილა, gultmisani ortskhobila, orcxobila, zodiaqo, motivacia, naperwkali, Samotivacio frazebi, motivation, Fortune cookie, ქართული Fortune Cookie, ქართული ფორჩენ ქუქი, ქუქი, ფორჩენ ქუქი, Online fortune cookie">
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,Nofollow" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="description" content="Gultmisani ortskhobila" />
+    <meta
+      name="keywords"
+      content="გულთმისანი ორცხობილა, წინასწარმეტყველება, ზოდიაქო, მოტივაცია, ნაპერწკალი, სამოტივაციო ფრაზები, ფრაზები მოტივაციისთვის, მოტივაცია მაკლია, იღბლის ორცხობილა, gultmisani ortskhobila, orcxobila, zodiaqo, motivacia, naperwkali, Samotivacio frazebi, motivation, Fortune cookie, ქართული Fortune Cookie, ქართული ფორჩენ ქუქი, ქუქი, ფორჩენ ქუქი, Online fortune cookie"
+    />
     <link rel="stylesheet" href="./styles/css/global.css" />
-    <link rel="icon" type="image/x-icon" href="/assets/images/Favicon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/images/Favicon.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <title>Gultmisani</title>
   </head>
   <body>
@@ -76,7 +80,10 @@
       </div>
       <div class="social-wrap">
         <div class="facebook">
-          <a href="https://www.facebook.com/profile.php?id=61556628068428" target="_blank">
+          <a
+            href="https://www.facebook.com/profile.php?id=61556628068428"
+            target="_blank"
+          >
             <img src="./assets/images/facebook.svg" alt="facebook" />
           </a>
         </div>
@@ -108,7 +115,7 @@
           <p>1200x1200</p>
         </div>
       </div>
-      <div class="download-button">გადმოწერა</div>
+      <button id="download" class="download-button">გადმოწერა</button>
     </div>
 
     <!--? Marquee Right  -->
@@ -134,10 +141,41 @@
         </div>
       </div>
     </section>
-    </div>
+    <iframe
+      title="square size"
+      name="square size"
+      id="iframe"
+      src="square-size.html"
+      style="position: absolute; top: -9999px"
+    ></iframe>
+    <iframe
+      title="story size"
+      name="story size"
+      id="iframe1"
+      src="story-size.html"
+      style="position: absolute; top: -9999px; width: 1080px; height: 1920px"
+    ></iframe>
+
     <!-- 
     <a href="./square-size.html"> Click me for test</a>
     <a href="./story-size.html">Clcik meee!</a> -->
+    <!-- <script>
+      document
+        .getElementById("download")
+        .addEventListener("click", function () {
+          const iframe = document.getElementById("iframe");
+          iframe.onload = function () {
+            html2canvas(iframe.contentDocument.body).then(function (canvas) {
+              const link = document.createElement("a");
+              link.download = "screenshot.png";
+              link.href = canvas.toDataURL();
+              link.click();
+            });
+          };
+          // Reload the iframe to ensure the onload event is triggered
+          iframe.contentWindow.location.reload();
+        });
+    </script> -->
     <script src="./js/function.js"></script>
   </body>
 </html>
