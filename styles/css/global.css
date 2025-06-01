@@ -241,6 +241,10 @@
 .body .download-story .footer .qrcode {
   margin-top: 16px;
 }
+.body .download-story .footer .qrcode img {
+  width: 92.99px;
+  height: 92.99px;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
